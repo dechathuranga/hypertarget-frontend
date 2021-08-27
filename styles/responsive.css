@@ -1,0 +1,44 @@
+@media(max-width:750px ){
+    .banner-img-wrapper{
+        margin-top: 65px;
+    }
+    .banner-con{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .banner-con > *{
+        text-align: center;
+    }
+    .banner-bottom-logos-area{
+        transform: translateY(0px);
+        margin-bottom: 60px;
+    }
+    .landing-header-area{
+        padding-bottom: 65px;
+    }
+    .sec2 .heading-2{
+        margin-top: 60px;
+    }
+    .img0{
+        margin-bottom: 25px;
+    }
+    .banner-cta .heading-3{
+        margin-bottom: 25px;
+        text-align: center;
+    }
+    .banner-cta-contain{
+        justify-content: center !important;
+    }
+    .banner-cta{
+        transform: translateY(0px);
+        margin-top: 55px;
+    }
+    footer.main-footer{
+        padding-top: 55px;
+        margin-top: 65px;
+    }
+    .heading-2, .heading-3, .para{
+        text-align: center;
+    }
+}
