@@ -1,5 +1,14 @@
 import Head from 'next/head'
 
+console.log(global.$type);
+console.log(global.$price);
+console.log(global.$name);
+console.log(global.$email);
+console.log(global.$cardDetailNo);
+console.log(global.$cardDetailDate);
+console.log(global.$cardDetailCvv);
+console.log(global.$cardDetailZip);
+
 export default function Home() {
   return (
     <div>

@@ -18,3 +18,4 @@ export default withIronSession(handler, {
     secure: process.env.NODE_ENV === "production",
   },
 });
+
