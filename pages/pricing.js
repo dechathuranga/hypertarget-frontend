@@ -16,22 +16,22 @@ export default function Home() {
 
 
   const handleClickMonthlyBasic = () => {
-    globalVariableSet("M","99");
+    globalVariableSet("MB","99");
     router.push('/payment');
   }
 
   const handleClickMonthlyPro = () => {
-    globalVariableSet("M","150");
+    globalVariableSet("MY","150");
     router.push('/payment');
   }
 
   const handleClickYearlyBasic = () => {
-    globalVariableSet("Y","79");
-    router.push('/payment');
+    globalVariableSet("YB","79");
+    router.push('/payment?name=66');
   }
 
   const handleClickYearlyPro = () => {
-    globalVariableSet("Y","120");
+    globalVariableSet("YY","120");
     router.push('/payment');
   }
 
