@@ -74,11 +74,11 @@ export default function Home() {
         <div class="row justify-content-center">
             <div class="col-md-8 col-sm-12 text-center">
                 <div class="c_card check-email-wrap">
-                    <img src="assets/images/hypertarget-text.svg" alt=""/>
+                    <img style={{marginLeft: 'auto', marginRight: 'auto' }} src="assets/images/hypertarget-text.svg" alt=""/>
                     <p class="e_para">
                         sign in as
                     </p>
-                    <h4 class="fw-bold mb-5">johndoe@gmail.com</h4>
+                    <h4 class="fw-bold mb-5">dechathuranga@gmail.com</h4>
 					<button class="btn btn-rounded filter-btn mt-20" onclick="window.location.href = 'error.html';">
 					Sign in
                     </button>

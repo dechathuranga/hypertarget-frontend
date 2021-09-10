@@ -7,12 +7,27 @@ import Head from 'next/head'
 import { useRouter } from "next/router";
 import { withIronSession } from "next-iron-session";
 import getConfig from 'next/config'
+// import { signIn, signOut, useSession } from "next-auth/client";
+import { providers, signIn, getSession, csrfToken } from "next-auth/client";
 
 import CheckoutForm from "./CheckoutForm";
 
 console.log("*****----**-*-*--")
 console.log(global.$type);
 console.log(global.$price);
+
+let data1 = {
+  csrfToken : '5beca4af4431232bb4a5d1dca74f1b5aaa1e4e01e9a89c315df75e0e335a6cce',
+  email : 'dechathuranga@gmail.com',
+}
+
+// session: async (session, data1) => {
+//   console.log('data passed to object when signed in', data1)
+//   //  user object there doesn't have all data passed before
+//   return Promise.resolve(session)
+// }
+
+console.log("// * - " + getSession)
 
 
 const stripePromise = loadStripe("pk_test_51JX4itAOb7pHxrW2EOFHb2DOYEDNSALi7fi8ipuGwpJ0SdKbbT4Ur0tY5otpkw1U6o0aELi9ftkEjAM56siFJugK00PDcVYkky");
@@ -57,6 +72,8 @@ const onKeyUpEmail = (e) => {
   console.log(e.target.value);
   window.$email = e.target.value;
 }
+
+// const [session, loading] = useSession();
 
 const CheckoutPage = ({paymentIntent }) => (
   <div>

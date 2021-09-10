@@ -76,7 +76,7 @@ export default function Home() {
           <div className="row">
             <div className="col-12 text-center">
               <div className="c_card check-email-wrap">
-                <img src="assets/images/email.svg" alt="" />
+                <img style={{marginLeft: 'auto', marginRight: 'auto' }} src="assets/images/email.svg" alt="" />
                 <h4 className="c_head">Please check your email</h4>
                 <p className="c_para">
                   By using passwordless login it increases the security of your account

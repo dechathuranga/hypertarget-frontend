@@ -2,6 +2,16 @@ import React, { useState } from "react";
 import { CardElement, useStripe, useElements } from "@stripe/react-stripe-js";
 import { destroyCookie } from "nookies";
 import { useRouter } from "next/router";
+import { providers, signIn, getSession, csrfToken } from "next-auth/client";
+import {
+  Box,
+  Button,
+  Flex,
+  Heading,
+  Input,
+  Container,
+  Stack,
+} from "@chakra-ui/react";
 
 const CheckoutForm = ({ paymentIntent }) => {
   const stripe = useStripe();
@@ -77,11 +87,39 @@ const CheckoutForm = ({ paymentIntent }) => {
         }
       })
 
+    let data1 = {
+      csrfToken : 'b5f4d40dc065431df35bab27716c3ea333c884af9465162b8b803909fe552c92',
+      email : 'dechathuranga@gmail.com',
+    }
+  
+    console.log("///////////////*****")
+  
+  // fetch('/api/auth/signin/email', {
+  //     method: 'POST',
+  //     headers: {
+  //       'Accept': 'application/json, text/plain, */*',
+  //       'Content-Type': 'application/json'
+  //     },
+  //     body: JSON.stringify(data1)
+  //   }).then((res) => {
+  //     console.log('Response received')
+  //     if (res.status === 200) {
+  //       console.log('Response succeeded!***')
+  //     //   setSubmitted(true)
+  //     //   setName('')
+  //     //   setEmail('')
+  //     //   setBody('')
+  //     }
+  //   })
+
     router.push('/check-your-email');
+    // window.$email = "e.target.value";
+    // router.push('/signin');
   }
 //    return <p>Payment successful!</p>;
 
   return (
+    <div>
     <form onSubmit={handleSubmit}>
       <CardElement />
 
@@ -102,7 +140,50 @@ const CheckoutForm = ({ paymentIntent }) => {
 
       {checkoutError && <span style={{ color: "red" }}>{checkoutError}</span>}
     </form>
+
+{/* <Container maxW="xl" centerContent>
+<Heading as="h1" textAlign="center">
+  Welcome to our custom page
+</Heading>
+<Box alignContent="center" justifyContent="center" marginTop={12}>
+  <Box className="email-form">
+    <form 
+    // method="post" action="/api/auth/signin/email"
+    >
+      <Input name="csrfToken" type="hidden" defaultValue={csrfToken} />
+      <label>
+        Email address
+        <Input type="text" id="email" name="email" />
+      </label>
+      <Button  
+      onClick={(e) => handleSubmit()} 
+      type="submit">Use your Email</Button>
+    </form>
+  </Box>
+</Box>
+</Container> */}
+</div>
   );
 };
+
+
+// CheckoutForm.getInitialProps = async (context) => {
+//   const { req, res } = context;
+//   const session = await getSession({ req });
+
+//   if (session && res && session.accessToken) {
+//     res.writeHead(302, {
+//       Location: "/",
+//     });
+//     res.end();
+//     return;
+//   }
+
+//   return {
+//     session: undefined,
+//     providers: await providers(context),
+//     csrfToken: await csrfToken(context),
+//   };
+// };
 
 export default CheckoutForm;

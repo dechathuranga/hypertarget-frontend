@@ -1,29 +1,53 @@
 import Head from 'next/head'
+import React from "react";
+import Link from "next/link";
+import { signIn, signOut, useSession } from "next-auth/client";
 
 export default function Home() {
+  const [session, loading] = useSession();
   return (
     <div>
       <Head>
-      <meta charset="UTF-8"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Hypertarget</title>
-    {/* <!-- favicon --> */}
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
-    {/* <!-- bootstrap  --> */}
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"/>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Hypertarget</title>
+        {/* <!-- favicon --> */}
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+        {/* <!-- bootstrap  --> */}
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" />
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-    {/* <!-- owl carousel --> */}
-    <link rel="stylesheet" href="assets/css/owl.carousel.min.css"/>
-    <link rel="stylesheet" href="assets/css/owl.theme.default.min.css"/>
-    {/* <!-- custom css --> */}
-    <link rel="stylesheet" href="assets/css/steps.css"/>
-    <link rel="stylesheet" href="assets/css/main.css"/>
-    <link rel="stylesheet" href="assets/css/responsive.css"/>
-    <link rel="stylesheet" href="assets/css/code.css"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+        {/* <!-- owl carousel --> */}
+        <link rel="stylesheet" href="assets/css/owl.carousel.min.css" />
+        <link rel="stylesheet" href="assets/css/owl.theme.default.min.css" />
+        {/* <!-- custom css --> */}
+        <link rel="stylesheet" href="assets/css/steps.css" />
+        <link rel="stylesheet" href="assets/css/main.css" />
+        <link rel="stylesheet" href="assets/css/responsive.css" />
+        <link rel="stylesheet" href="assets/css/code.css" />
       </Head>
+
+      <main>
+        {!session && (
+          <>
+             Not signed in <br />
+             <button onClick={signIn}>Sign In</button>
+           </>
+        )}
+        {session && (
+          <>
+            Signed in as {session.user.email} <br />
+            <div>You can now access our super secret pages</div>
+            <button>
+              <Link href="/secret">To the secret</Link>
+            </button>
+            <button onClick={signOut}>sign out</button>
+          </>
+        )}
+      </main>
+
       <nav className="main-nav landing-nav">
         <div className="nav-wrapper">
           <div className="d-flex">
@@ -456,3 +480,42 @@ export default function Home() {
     </div>
   )
 }
+
+
+// /////////////////////
+// import Head from "next/head";
+// import styles from "../styles/Home.module.css";
+// import React from "react";
+// import Link from "next/link";
+// import { signIn, signOut, useSession } from "next-auth/client";
+
+// export default function Home() {
+//   const [session, loading] = useSession();
+//   return (
+//     <div className={styles.container}>
+//       <Head>
+//         <title>Auth Examples</title>
+//         <link rel="icon" href="/favicon.ico" />
+//       </Head>
+
+//       <main className={styles.main}>
+//         {!session && (
+//           <>
+//             Not signed in <br />
+//             <button onClick={signIn}>Sign In</button>
+//           </>
+//         )}
+//         {session && (
+//           <>
+//             Signed in as {session.user.email} <br />
+//             <div>You can now access our super secret pages</div>
+//             <button>
+//               <Link href="/secret">To the secret</Link>
+//             </button>
+//             <button onClick={signOut}>sign out</button>
+//           </>
+//         )}
+//       </main>
+//     </div>
+//   );
+// }
