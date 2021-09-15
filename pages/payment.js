@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Stripe from "stripe";
 import { parseCookies, setCookie } from "nookies";
 import { loadStripe } from "@stripe/stripe-js";
@@ -17,7 +17,7 @@ console.log(global.$type);
 console.log(global.$price);
 
 let data1 = {
-  csrfToken : '5beca4af4431232bb4a5d1dca74f1b5aaa1e4e01e9a89c315df75e0e335a6cce',
+  csrfToken : '298e12975ee552e8d504cdb6aff2cdd45a4a4c6340b74de4d8cb0df887fdf7ec%7Cfef88c4a4b74fd57686bcb474f48f49de424aad8ccaa2cf709c970051f9b13db',
   email : 'dechathuranga@gmail.com',
 }
 
@@ -33,6 +33,7 @@ console.log("// * - " + getSession)
 const stripePromise = loadStripe("pk_test_51JX4itAOb7pHxrW2EOFHb2DOYEDNSALi7fi8ipuGwpJ0SdKbbT4Ur0tY5otpkw1U6o0aELi9ftkEjAM56siFJugK00PDcVYkky");
 
 export const getServerSideProps = async ctx => {
+  
   const stripe = new Stripe("sk_test_51JX4itAOb7pHxrW20akGAPv5Snf9RNRZDBuyVjEqwu3U1A1mktlZnDiETU5tQfE7nnCuEWCKKrsYLhnZAXlXuV9C00UgwvUBBP");
 
   let paymentIntent;
@@ -50,7 +51,8 @@ export const getServerSideProps = async ctx => {
   }
 
   paymentIntent = await stripe.paymentIntents.create({
-    amount : 12000,
+    
+    amount : 15000,
     currency: "usd"
   });
 
@@ -75,7 +77,18 @@ const onKeyUpEmail = (e) => {
 
 // const [session, loading] = useSession();
 
-const CheckoutPage = ({paymentIntent }) => (
+// const CheckoutPage = ({paymentIntent }) => (
+
+  export default function CheckoutPage({ paymentIntent }) {
+    // export default function SignIn() {
+    
+    
+      // useEffect(() => {
+      //   // buttonRef.current.click();
+      //   alert(global.$price);
+      // }, []);
+    
+      return (
   <div>
     <Head>
       <meta charset="UTF-8" />
@@ -296,4 +309,6 @@ const CheckoutPage = ({paymentIntent }) => (
   </div>
 );
 
-export default CheckoutPage;
+  }
+
+// export default CheckoutPage;

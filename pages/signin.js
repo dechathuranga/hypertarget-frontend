@@ -11,7 +11,7 @@ import {
 } from "@chakra-ui/react";
 
 console.log("mail - "+ global.$email);
-alert("Hello! I am an alert box!! - " + global.$email);
+// alert("Hello! I am an alert box!! - " + global.$email);
 
 
 // const handleSubmit = async e => {
@@ -53,25 +53,27 @@ export default function SignIn({ providers, csrfToken }) {
   }, []);
 
   return (
-    <Container maxW="xl" centerContent>
-      <Box alignContent="center" justifyContent="center" marginTop={12}>
-        <Box className="email-form">
+  <div>
+    {/* <Container maxW="xl" centerContent> */}
+      {/* <Box alignContent="center" justifyContent="center" marginTop={12}> */}
+        {/* <Box className="email-form"> */}
           <form 
           method="post" action="/api/auth/signin/email"
           >
             <Input name="csrfToken" type="hidden" defaultValue={csrfToken} />
-            <label>
-              Email address
-              <Input type="text" id="email" name="email" defaultValue={global.$email}/>
-            </label>
+           
+              <Input type="text" type="hidden" id="email" name="email" defaultValue={global.$email}/>
+            
             <Button  
             ref={buttonRef}
+            type="hidden"
             // onClick={(e) => handleSubmit()} 
-            type="submit">Use your Email</Button>
+            type="submit"></Button>
           </form>
-        </Box>
-      </Box>
-    </Container>
+        {/* </Box> */}
+      {/* </Box> */}
+     {/* </Container> */}
+    </div>
   );
 }
 

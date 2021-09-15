@@ -3,37 +3,70 @@ import { withIronSession } from "next-iron-session";
 import { useRouter } from "next/router";
 import login from './api/login';
 import getConfig from 'next/config'
+import React, { useEffect, useRef } from "react";
 
 
 export default function Home() {
 
   const router = useRouter();
 
+
   const globalVariableSet = (type,price) => {
     window.$type = type;
     window.$price = price;
   }
 
-
   const handleClickMonthlyBasic = () => {
-    globalVariableSet("MB","99");
+  
+    if(window.$type == 'M'){
+      globalVariableSet("MB","99");
+    }else{
+      globalVariableSet("YB","79");
+    } 
     router.push('/payment');
   }
 
   const handleClickMonthlyPro = () => {
-    globalVariableSet("MY","150");
+    if(window.$type == 'M'){
+      globalVariableSet("MY","150");
+    }else{
+      globalVariableSet("YY","120");
+    } 
     router.push('/payment');
   }
 
-  const handleClickYearlyBasic = () => {
-    globalVariableSet("YB","79");
-    router.push('/payment?name=66');
+  // const handleClickYearlyBasic = () => {
+  //   globalVariableSet("YB","79");
+  //   router.push('/payment?name=66');
+  // }
+
+  // const handleClickYearlyPro = () => {
+  //   globalVariableSet("YY","120");
+  //   router.push('/payment');
+  // }
+
+  const handleClickMonth = () => {
+    document.getElementById("basicPrice").innerHTML = " $99/mo";
+    document.getElementById("proPrice").innerHTML = " $150/mo";
+    window.$type = "M";
+
   }
 
-  const handleClickYearlyPro = () => {
-    globalVariableSet("YY","120");
-    router.push('/payment');
+  const handleClickYear = () => {
+    document.getElementById("basicPrice").innerHTML = " $79/mo";
+    document.getElementById("proPrice").innerHTML = " $120/mo";
+    window.$type = "Y";
   }
+
+  useEffect(() => {
+    // buttonRef.current.click();
+  document.getElementById("basicPrice").innerHTML = " $99/mo";
+  document.getElementById("proPrice").innerHTML = " $150/mo";
+  window.$type = "M";
+  }, []);
+
+
+
 
   return (
     <div>
@@ -59,6 +92,11 @@ export default function Home() {
         {/* <link rel="stylesheet" href="assets/css/code.css" /> */}
       </Head>
       <body>
+
+{/* <p id="demo" onClick={(e) => myFunction()}>Click me to change my HTML content (innerHTML).</p> */}
+
+
+
         <nav className="main-nav landing-nav">
           <div className="nav-wrapper">
             <div className="d-flex">
@@ -117,16 +155,18 @@ export default function Home() {
                 {/* <!-- plan page tabs --> */}
                 <ul className="nav nav-tabs price-tabs" id="myTab" role="tablist">
                   <li className="nav-item" role="presentation">
-                    <a className="nav-link active" id="home-tab" data-bs-toggle="tab" href="#home" role="tab"
+                    <a onClick={(e) => handleClickMonth()} className="nav-link active" id="home-tab" data-bs-toggle="tab" href="#home" role="tab"
                       aria-controls="home" aria-selected="true">monthly</a>
                   </li>
                   <li className="nav-item" role="presentation">
-                    <a className="nav-link" id="profile-tab" data-bs-toggle="tab" href="#profile" role="tab"
+                    <a onClick={(e) => handleClickYear()} className="nav-link" id="profile-tab" data-bs-toggle="tab" href="#profile" role="tab"
                       aria-controls="profile" aria-selected="false">yearly</a>
                   </li>
                 </ul>
                 <div className="tab-content" id="myTabContent">
-                  <div className="tab-pane fade show active pt-100" id="home" role="tabpanel" aria-labelledby="home-tab">
+                  <div className="tab-pane fade show active pt-100" 
+                  // id="home" role="tabpanel" aria-labelledby="home-tab"
+                  >
                     <div className="row">
                       <div className="col-lg-4 col-md-4 col-sm-12 col-12">
                         <div className="price-card">
@@ -134,8 +174,8 @@ export default function Home() {
                             <p className="price-cat">
                               Basic
                                         </p>
-                            <h4 className="main-price">
-                              $99/mo
+                            <h4 id="basicPrice" className="main-price">
+                            (innerHTML)
                                         </h4>
                             <p className="para">
                               Marketing analytics and website flow optimization.
@@ -165,8 +205,8 @@ export default function Home() {
                             <p className="price-cat">
                               Pro
                                         </p>
-                            <h4 className="main-price">
-                              $150/mo
+                            <h4 id="proPrice" className="main-price">
+                            (innerHTML)
                                         </h4>
                             <p className="para">
                               Deep marketing channel analysis, website optimization, and smart audiences for growing websites.
@@ -230,7 +270,7 @@ export default function Home() {
                       </div>
                     </div>
                   </div>
-                  <div className="tab-pane fade pt-100 " id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                  {/* <div className="tab-pane fade pt-100 " id="profile" role="tabpanel" aria-labelledby="profile-tab">
                     <div className="row">
                       <div className="col-lg-4 col-md-4 col-sm-12 col-12">
                         <div className="price-card">
@@ -238,8 +278,8 @@ export default function Home() {
                             <p className="price-cat">
                               Basic
                                         </p>
-                            <h4 className="main-price">
-                              $79/mo
+                                        <h4 id="demo" className="main-price">
+                            (innerHTML)
                                         </h4>
                             <p className="para">
                               Marketing analytics and website flow optimization.
@@ -335,7 +375,7 @@ export default function Home() {
                         </div>
                       </div>
                     </div>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </div>

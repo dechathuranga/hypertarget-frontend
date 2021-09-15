@@ -56,7 +56,7 @@ export default function Home() {
                     </div>
                     <div className="con-area">
                       <div className="block-wrap">
-                        <a href="step2.html">
+                        <a href="/add-script">
                           <div className="block animate__animated animate__fadeInUp">
                             <div className="icon">
                               <img src="assets/images/icon1.svg" alt="" />

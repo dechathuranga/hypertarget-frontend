@@ -21,10 +21,38 @@ const options = {
         },
       },
       from: 'hypertargetmail@gmail.com',
+      // sendVerificationRequest({
+      //   identifier: email,
+      //   url,
+      //   provider: { server, from }
+      // }) {
+      //   "<html><div> <ul ><li><a  >Sign In</a></li>  <li><a >Sign Up</a></li> </ul></div></html>"
+      // },
     }),
   ],
   pages: {
-    signIn: "/payment",
+    signIn: "/signin",
+    verifyRequest: "/check-your-email",
+  },
+  callbacks: {
+    signIn: async (user, account, profile) => {
+      //console.log("Sign In User: " + JSON.stringify(user, null, 4));
+      return Promise.resolve(true);
+    },
+    redirect: async (url, baseUrl) => {
+      //console.log("URL: " + JSON.stringify(url, null, 4));
+      //console.log("Base URL: " + JSON.stringify(baseUrl, null, 4));
+      return Promise.resolve(
+        `${process.env.APP_URL || "http://localhost:3000"}/how-do-you-want-to-add-the-script`
+      );
+    },
+    // jwt: async (token, user, account, profile, isNewUser) => { return Promise.resolve(token) },
+    session: async (session, user) => {
+      session.user = user;
+      //console.log("Session Session: " + JSON.stringify(session, null, 4));
+      //console.log("Session User: " + JSON.stringify(user, null, 4));
+      return Promise.resolve(session);
+    },
   },
   database: {
     type: "sqlite",

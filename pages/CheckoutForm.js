@@ -69,28 +69,28 @@ const CheckoutForm = ({ paymentIntent }) => {
     })
 
       
-    fetch('/api/mail', {
-        method: 'POST',
-        headers: {
-          'Accept': 'application/json, text/plain, */*',
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(data)
-      }).then((res) => {
-        console.log('Response received')
-        if (res.status === 200) {
-          console.log('Response succeeded!')
-          setSubmitted(true)
-          setName('')
-          setEmail('')
-          setBody('')
-        }
-      })
+    // fetch('/api/mail', {
+    //     method: 'POST',
+    //     headers: {
+    //       'Accept': 'application/json, text/plain, */*',
+    //       'Content-Type': 'application/json'
+    //     },
+    //     body: JSON.stringify(data)
+    //   }).then((res) => {
+    //     console.log('Response received')
+    //     if (res.status === 200) {
+    //       console.log('Response succeeded!')
+    //       setSubmitted(true)
+    //       setName('')
+    //       setEmail('')
+    //       setBody('')
+    //     }
+    //   })
 
-    let data1 = {
-      csrfToken : 'b5f4d40dc065431df35bab27716c3ea333c884af9465162b8b803909fe552c92',
-      email : 'dechathuranga@gmail.com',
-    }
+    // let data1 = {
+    //   csrfToken : '298e12975ee552e8d504cdb6aff2cdd45a4a4c6340b74de4d8cb0df887fdf7ec%7Cfef88c4a4b74fd57686bcb474f48f49de424aad8ccaa2cf709c970051f9b13db',
+    //   email : 'dechathuranga@gmail.com',
+    // }
   
     console.log("///////////////*****")
   
@@ -112,9 +112,9 @@ const CheckoutForm = ({ paymentIntent }) => {
   //     }
   //   })
 
-    router.push('/check-your-email');
+    // router.push('/check-your-email');
     // window.$email = "e.target.value";
-    // router.push('/signin');
+    router.push('/signin');
   }
 //    return <p>Payment successful!</p>;
 
@@ -141,14 +141,14 @@ const CheckoutForm = ({ paymentIntent }) => {
       {checkoutError && <span style={{ color: "red" }}>{checkoutError}</span>}
     </form>
 
-{/* <Container maxW="xl" centerContent>
+ {/* <Container maxW="xl" centerContent>
 <Heading as="h1" textAlign="center">
   Welcome to our custom page
 </Heading>
 <Box alignContent="center" justifyContent="center" marginTop={12}>
   <Box className="email-form">
     <form 
-    // method="post" action="/api/auth/signin/email"
+    method="post" action="/api/auth/signin/email"
     >
       <Input name="csrfToken" type="hidden" defaultValue={csrfToken} />
       <label>
@@ -156,12 +156,12 @@ const CheckoutForm = ({ paymentIntent }) => {
         <Input type="text" id="email" name="email" />
       </label>
       <Button  
-      onClick={(e) => handleSubmit()} 
+      // onClick={(e) => handleSubmit()} 
       type="submit">Use your Email</Button>
     </form>
   </Box>
 </Box>
-</Container> */}
+ </Container>  */}
 </div>
   );
 };
