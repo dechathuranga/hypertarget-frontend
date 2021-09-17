@@ -1,7 +1,7 @@
 import { MongoClient } from 'mongodb'
 
 // let uri = process.env.MONGODB_URI
-let uri ='mongodb+srv://admin:admin@cluster0.w9t0r.mongodb.net/test'
+let uri ='mongodb+srv://admin:admin@cluster0.w9t0r.mongodb.net/hypertarget'
 // let dbName = process.env.MONGODB_DB
 let dbName = 'hypertarget'
 

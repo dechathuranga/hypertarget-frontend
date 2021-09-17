@@ -12,6 +12,7 @@ import {
   Container,
   Stack,
 } from "@chakra-ui/react";
+const bcrypt = require('bcryptjs');
 
 const CheckoutForm = ({ paymentIntent }) => {
   const stripe = useStripe();
@@ -48,11 +49,17 @@ const CheckoutForm = ({ paymentIntent }) => {
 
   if (checkoutSuccess){
 
+    const hash = bcrypt.hashSync(window.$email, 10);
+    // now we set user password to hashed password
+
     console.log('Sending')
     let data = {
         name : window.$name,
         email : window.$email,
+        key : hash,
       }
+
+      // alert(window.$name + " - " + window.$email)
 
       fetch('/api/add-user', {
       method: 'POST',

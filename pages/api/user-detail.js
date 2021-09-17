@@ -1,23 +1,16 @@
 import { connectToDatabase } from "../../util/mongodb";
+import Head from 'next/head'
 
 export default async (req, res) => {
   const { db } = await connectToDatabase();
 
-  let user = {
-    name : 'test',
-    email : 'asdasd@asd.com',
-    message : 'hi',
-    _id : 45245
-  }
-
-
-  const movies = await db
+    const user_detail = await db
     .collection("user_detail")
-    .insertOne(user);
-    // .find({})
+    .find({"email": req.query.val})
     // .sort({ metacritic: -1 })
-    // .limit(20)
-    // .toArray();
+    .limit(1)
+    .toArray();
 
-  res.json(movies);
+    
+  res.json(user_detail);
 };

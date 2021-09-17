@@ -10,7 +10,6 @@ export default function Home() {
 
   const router = useRouter();
 
-
   const globalVariableSet = (type,price) => {
     window.$type = type;
     window.$price = price;
