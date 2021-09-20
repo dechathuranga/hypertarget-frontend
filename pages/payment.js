@@ -21,12 +21,6 @@ let data1 = {
   email : 'dechathuranga@gmail.com',
 }
 
-// session: async (session, data1) => {
-//   console.log('data passed to object when signed in', data1)
-//   //  user object there doesn't have all data passed before
-//   return Promise.resolve(session)
-// }
-
 console.log("// * - " + getSession)
 
 
@@ -75,18 +69,8 @@ const onKeyUpEmail = (e) => {
   window.$email = e.target.value;
 }
 
-// const [session, loading] = useSession();
-
-// const CheckoutPage = ({paymentIntent }) => (
-
   export default function CheckoutPage({ paymentIntent }) {
-    // export default function SignIn() {
-    
-    
-      // useEffect(() => {
-      //   // buttonRef.current.click();
-      //   alert(global.$price);
-      // }, []);
+
     
       return (
   <div>

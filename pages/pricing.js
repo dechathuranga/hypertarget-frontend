@@ -34,15 +34,6 @@ export default function Home() {
     router.push('/payment');
   }
 
-  // const handleClickYearlyBasic = () => {
-  //   globalVariableSet("YB","79");
-  //   router.push('/payment?name=66');
-  // }
-
-  // const handleClickYearlyPro = () => {
-  //   globalVariableSet("YY","120");
-  //   router.push('/payment');
-  // }
 
   const handleClickMonth = () => {
     document.getElementById("basicPrice").innerHTML = " $99/mo";
@@ -269,112 +260,6 @@ export default function Home() {
                       </div>
                     </div>
                   </div>
-                  {/* <div className="tab-pane fade pt-100 " id="profile" role="tabpanel" aria-labelledby="profile-tab">
-                    <div className="row">
-                      <div className="col-lg-4 col-md-4 col-sm-12 col-12">
-                        <div className="price-card">
-                          <div className="price-header">
-                            <p className="price-cat">
-                              Basic
-                                        </p>
-                                        <h4 id="demo" className="main-price">
-                            (innerHTML)
-                                        </h4>
-                            <p className="para">
-                              Marketing analytics and website flow optimization.
-                                        </p>
-                          </div>
-                          <div className="price-body">
-                            <h5 className="head">
-                              What’s included
-                                        </h5>
-                            <ul className="price-inc-list">
-                              <li>6-Month Data History</li>
-                              <li>100% support</li>
-                              <li>Custom Reports</li>
-                              <li>Funnel Optimization</li>
-                            </ul>
-                            <button className="add-btn" 
-                            onClick={(e) => handleClickYearlyBasic()}
-                            // onClick="window.location.href = 'userjourney1-payment.html';"
-                            >
-                              add to cart
-                                        </button>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="col-lg-4 col-md-4 col-sm-12 col-12">
-                        <div className="price-card scale-up">
-                          <div className="price-header">
-                            <p className="price-cat">
-                              Pro
-                                        </p>
-                            <h4 className="main-price">
-                              $120/mo
-                                        </h4>
-                            <p className="para">
-                              Deep marketing channel analysis, website optimization, and smart audiences for growing websites.
-                                        </p>
-                          </div>
-                          <div className="price-body">
-                            <h5 className="head">
-                              Everything in basic +
-                                        </h5>
-                            <ul className="price-inc-list">
-                              <li>1 Year Data History</li>
-                              <li>Journey Analysis</li>
-                              <li>1:1 Onboarding</li>
-                              <li>Export Unlimited Smart Audiences</li>
-                            </ul>
-                            <button className="add-btn" 
-                            onClick={(e) => handleClickYearlyPro()}
-                            // onClick="window.location.href = 'userjourney1-payment.html';"
-                            >
-                              add to cart
-                                        </button>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="col-lg-4 col-md-4 col-sm-12 col-12">
-                        <div className="price-card custom">
-                          <div className="price-header">
-                            <p className="price-cat">
-                              Custom
-                                        </p>
-                            <button className="bordered">
-                              get in touch
-                                            <svg width="22" height="15" viewBox="0 0 22 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M13.8913 1L20.5 7.5M13.8913 14L20.5 7.5M20.5 7.5H1.5" stroke="#192B43" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
-                              </svg>
-                            </button>
-                            <p className="para">
-                              Higher plans are better served by contacting Hypertarget.
-                                        </p>
-                          </div>
-                          <div className="price-body">
-                            <h5 className="head">
-                              Everything in Pro +
-                                        </h5>
-                            <ul className="price-inc-list">
-                              <li>2 Years Data History</li>
-                              <li>Budget Planning</li>
-                              <li>Advanced User Management</li>
-                              <li>Analytics Bootcamp</li>
-                              <li>Export Unlimited Events to Facebook, Google Ads & More</li>
-                            </ul>
-                            <div className="d-flex justify-content-center">
-                              <button className="bordered style-2">
-                                get in touch
-                                            <svg width="22" height="15" viewBox="0 0 22 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                  <path d="M13.8913 1L20.5 7.5M13.8913 14L20.5 7.5M20.5 7.5H1.5" stroke="#192B43" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
-                                </svg>
-                              </button>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div> */}
                 </div>
               </div>
             </div>

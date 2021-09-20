@@ -14,6 +14,10 @@ export default function Home() {
 
   console.log(global.$key);
 
+  const handleClickCopy = () => {
+    navigator.clipboard.writeText("<Script>\n src =/base/require.js type = text/javascript \n token | " + global.$key + " \n \n </Script>");
+  }
+
   return (
     <div>
       <Head>
@@ -99,7 +103,7 @@ export default function Home() {
                               </div>
                             </div>
                             <div className="card-body">
-                              <a href="#" className="cta animate__animated animate__animated animate__flipInX">COPY CODE</a>
+                              <a onClick={(e) => handleClickCopy()}  href="#" className="cta animate__animated animate__animated animate__flipInX">COPY CODE</a>
                               <p className="theme-p animate__animated animate__fadeInLeft">
                                 Copy and paste the snippet below before your website’s closing <span>
                                   &lt; /head&gt; </span> tag. Once installed, Hypertarget will automatically
