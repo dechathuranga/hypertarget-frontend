@@ -27,26 +27,7 @@ export default function Home() {
         <link rel="stylesheet" href="assets/css/main.css" />
         <link rel="stylesheet" href="assets/css/responsive.css" />
         <link rel="stylesheet" href="assets/css/code.css" />
-      </Head>
-
-      <main>
-        {!session && (
-          <>
-             Not signed in <br />
-             <button onClick={signIn}>Sign In</button>
-           </>
-        )}
-        {session && (
-          <>
-            Signed in as {session.user.email} <br />
-            <div>You can now access our super secret pages</div>
-            <button>
-              <Link href="/secret">To the secret</Link>
-            </button>
-            <button onClick={signOut}>sign out</button>
-          </>
-        )}
-      </main>
+      </Head>   
 
       <nav className="main-nav landing-nav">
         <div className="nav-wrapper">
@@ -59,7 +40,7 @@ export default function Home() {
           <ul className="nav-list">
             <li><a href>About</a></li>
             <li><a href>Features</a></li>
-            <li><a href>Pricing</a></li>
+            <li><a href="/pricing">Pricing</a></li>
             <li><a href>Testimonials</a></li>
             <li><a href>Help</a></li>
           </ul>
