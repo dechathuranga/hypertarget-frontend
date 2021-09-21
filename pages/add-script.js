@@ -15,7 +15,8 @@ export default function Home() {
   console.log(global.$key);
 
   const handleClickCopy = () => {
-    navigator.clipboard.writeText("<Script>\n src =/base/require.js type = text/javascript \n token | " + global.$key + " \n \n </Script>");
+    navigator.clipboard.writeText("<script src = \"./base/require.js?" + global.$key + "\" type = \"text/javascript\"/></script>");
+   
   }
 
   return (
@@ -113,7 +114,7 @@ export default function Home() {
                                   <p>HTML</p>
                                 </div>
                                 <div className="code-body">
-                                  <textarea readOnly defaultValue={"<Script>\n src =/base/require.js type = text/javascript \n token | " + global.$key + " \n \n </Script>"} />
+                                  <textarea readOnly defaultValue={"<script src = \"./base/require.js?" + global.$key + "\" type = \"text/javascript\"/></script>"} />
                                 </div>
                               </div>
                               <a href className="plan-cta animate__animated animate__animated animate__flipInX">Email Code instructions</a>

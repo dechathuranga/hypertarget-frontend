@@ -21,6 +21,7 @@
     "bcrypt": "^5.0.1",
     "bcryptjs": "^2.4.3",
     "bootstrap": "^5.0.2",
+    "cors": "^2.8.5",
     "framer-motion": "^3.2.1",
     "fs": "0.0.1-security",
     "mongodb": "^4.1.1",
