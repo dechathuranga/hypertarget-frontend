@@ -227,10 +227,10 @@ export default function Home() {
                               Custom
                                         </p>
                             <button className="bordered">
-                              get in touch
-                                            <svg width="22" height="15" viewBox="0 0 22 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M13.8913 1L20.5 7.5M13.8913 14L20.5 7.5M20.5 7.5H1.5" stroke="#192B43" strokeWidth="1.4" stroke-linecap="round" stroke-linejoin="round" />
-                              </svg>
+                              get in touch   <i style={{ marginLeft : "10px", }} class="fas fa-arrow-right"></i>
+                                            {/* <svg width="22" height="15" viewBox="0 0 22 15" fill="none" xmlns="http://www.w3.org/2000/svg"> */}
+                                {/* <path d="M13.8913 1L20.5 7.5M13.8913 14L20.5 7.5M20.5 7.5H1.5" stroke="#192B43" strokeWidth="1.4" stroke-linecap="round" stroke-linejoin="round" /> */}
+                              {/* </svg> */}
                             </button>
                             <p className="para">
                               Higher plans are better served by contacting Hypertarget.
@@ -249,10 +249,10 @@ export default function Home() {
                             </ul>
                             <div className="d-flex justify-content-center">
                               <button className="bordered style-2">
-                                get in touch
-                                            <svg width="22" height="15" viewBox="0 0 22 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                  <path d="M13.8913 1L20.5 7.5M13.8913 14L20.5 7.5M20.5 7.5H1.5" stroke="#192B43" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
-                                </svg>
+                                get in touch   <i style={{ marginLeft : "10px", }} class="fas fa-arrow-right"></i>
+                                            {/* <svg width="22" height="15" viewBox="0 0 22 15" fill="none" xmlns="http://www.w3.org/2000/svg"> */}
+                                  {/* <path d="M13.8913 1L20.5 7.5M13.8913 14L20.5 7.5M20.5 7.5H1.5" stroke="#192B43" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" /> */}
+                                {/* </svg> */}
                               </button>
                             </div>
                           </div>

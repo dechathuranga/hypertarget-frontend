@@ -10,7 +10,5 @@ export default async (req, res) => {
     // .sort({ metacritic: -1 })
     .limit(1)
     .toArray();
-
-    
   res.json(user_detail);
 };

@@ -1,6 +1,8 @@
 import Head from 'next/head'
 import React, {useState, useEffect, useRef } from "react";
 import { signIn, signOut, useSession, getSession } from "next-auth/client";
+import axios from 'axios';
+import { useRouter } from "next/router";
 
 export default function Home() {
 
@@ -13,6 +15,30 @@ export default function Home() {
   const [session, loading] = useSession();
 
   console.log(global.$key);
+
+  var data1 = global.$key;
+
+  const router = useRouter();
+
+  const handleTestConnection = async (e, val) => {
+    // e.preventDefault()
+    console.log(val)
+
+    fetch('/api/test-connection', {
+      method: 'POST',
+      headers: {
+        'Accept': 'application/json, text/plain, */*',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(data1)
+    }).then((res) => {
+      console.log('Response received')
+      if (res.status === 200) {
+        console.log('Response succeeded!')
+        router.push('/installation-complete');
+      }
+    })
+  }
 
   const handleClickCopy = () => {
     navigator.clipboard.writeText("<script src = \"./base/require.js?" + global.$key + "\" type = \"text/javascript\"/></script>");
@@ -119,7 +145,7 @@ export default function Home() {
                               </div>
                               <a href className="plan-cta animate__animated animate__animated animate__flipInX">Email Code instructions</a>
                               <div className="d-flex justify-content-end">
-                                <a href className="cta animate__animated animate__animated animate__flipInXp">Test Connection</a>
+                                <a onClick={(e) => handleTestConnection()} className="cta animate__animated animate__animated animate__flipInXp">Test Connection</a>
                               </div>
 
 
