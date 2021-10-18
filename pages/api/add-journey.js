@@ -12,6 +12,7 @@ export default async (req, res) => {
     journeyName:req.body.journeyName,
     layerNo:req.body.layerNo,
     event:req.body.event,
+    key:req.body.key,
     stepName:req.body.stepName,
     createDate:d,
 

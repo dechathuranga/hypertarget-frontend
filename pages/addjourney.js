@@ -1,17 +1,116 @@
 import Head from 'next/head'
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { signIn, signOut, useSession, getSession } from "next-auth/client";
 import axios from 'axios';
 import { useRouter } from "next/router";
 
 export default function Home() {
 
+    const [count, setCount] = useState(0);
 
-    const [options, setOptions] = useState([{ label: 'Select Value', value: '0' }]);
+    const Home = async () => {
+        // alert(global.$key);
+        fetch('/api/journey-detail', {
+            method: 'POST',
+            headers: {
+                'Accept': 'application/json, text/plain, */*',
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify('10201')
+        })
+            .then(response => response.json())
+            .then(response => {
+                console.log("** - ", response)
+                setCount: response.length;
+                // alert(response.length);
+                // alert(count);
+                window.$counts = response.length;
+                if (0 < response.length) {
+                    document.getElementById("userJourneyName").innerHTML = response[0].journeyName;
+                    document.getElementById("layer1Name").innerHTML = response[0].stepName;
+                    document.getElementById("layer1Count").innerHTML = 2;
+                    // document.getElementById("layer2Name").innerHTML = response[0].stepName;
+                }
+            });
+
+
+    }
+
+    const buttonRef = useRef(null);
+
+    // const [count, setCount] = useState(0);
+
+    global.$key = "10201"
+
+    useEffect(() => {
+        async function fetchMyAPI() {
+            document.getElementById("userJourneyName").innerHTML = "Journey Name";
+            document.getElementById("layer1Name").innerHTML = "Layer Name";
+            document.getElementById("layer1Count").innerHTML = "0";
+            document.getElementById("layer2Name").innerHTML = "Layer Name";
+            Home();
+            // buttonRef.current.click();
+            // var val = "FirstTest1";
+            // const url = 'http://localhost:3000/api/visitor-count';
+            // const payload = { params: { val } }
+            // const response = await axios.get(url)
+            // if (response.data) {
+            //     console.log("** - ", response.data[0])
+
+            //     const obj = {};
+
+            //     for (let i = 0, len = response.data.length; i < len; i++) {
+            //         obj[response.data[i]['currentIp']] = response.data[i];
+            //     }
+
+            //     response.data = new Array();
+
+            //     for (const key in obj) {
+            //         response.data.push(obj[key]);
+            //     }
+
+            //     console.log("** length- ", response.data.length)
+            //      setCount : response.data.length;
+            //      global.$key = response.data.length;
+
+
+            // }
+        }
+        fetchMyAPI();
+    }, []);
+
+    const [options, setOptions] = useState([]);
     const router = useRouter();
+
 
     let timeout = null;
 
+    const getCount = async (e) => {
+        var val = "FirstTest1";
+        const url = 'http://localhost:3000/api/visitor-count';
+        const payload = { params: { val } }
+        const response = await axios.get(url)
+        if (response.data) {
+            console.log("** - ", response.data[0])
+
+            const obj = {};
+
+            for (let i = 0, len = response.data.length; i < len; i++) {
+                obj[response.data[i]['currentIp']] = response.data[i];
+            }
+
+            response.data = new Array();
+
+            for (const key in obj) {
+                response.data.push(obj[key]);
+            }
+
+            console.log("** length- ", response.data.length)
+            setCount: response.data.length;
+            alert("Visitor Count - " + response.data.length)
+
+        }
+    }
     const handleSaveJourney = async (e) => {
 
         console.log("Add data")
@@ -19,9 +118,10 @@ export default function Home() {
         let data = {
             journeyName: window.$journeyName,
             url: window.$url,
+            key: window.$key,
             layerNo: 1,
-            // event: window.$event,
-            event: "Try it",
+            event: window.$event,
+            // event: "Try it",
             stepName: window.$stepName,
         }
 
@@ -52,9 +152,11 @@ export default function Home() {
 
     const selectEvent = (e) => {
         console.log("event");
+        console.log(e.target.value);
+        // console.log(global.$event);
         // console.log(e.target.value);
-        console.log(window.$event);
-        // window.$event = e.target.value;
+        // console.log(window.$event);
+        window.$event = e.target.value;
     }
 
     const handleClickSendUrl = async (e) => {
@@ -63,7 +165,8 @@ export default function Home() {
         window.$url = e.target.value;
 
         clearTimeout(timeout);
-        setOptions([{ label: 'Select Value', value: '0' }]);
+        // setOptions([{ label: 'Click', value: '0' }]);
+        // setOptions([{ label: 'Visit', value: '1' }]);
 
         timeout = setTimeout(function () {
             console.log('Input Value:', e.target.value);
@@ -85,6 +188,19 @@ export default function Home() {
 
 
                     // }
+
+                    const obj = {};
+
+                    for (let i = 0, len = response.length; i < len; i++) {
+                        obj[response[i]['innerText']] = response[i];
+                    }
+
+                    response = new Array();
+
+                    for (const key in obj) {
+                        response.push(obj[key]);
+                    }
+
                     const tabledata = [];
                     response.map((d) =>
                         tabledata.push({
@@ -92,6 +208,14 @@ export default function Home() {
                             value: d.innerText,
                         })
                     );
+
+                    // setOptions([{ label: 'Click', value: '0' }]);
+                    // setOptions([{ label: 'Visit', value: '1' }]);
+
+                    // tabledata.push(
+                    //     { label: 'Click', value: "0", },
+                    //     { label: 'Visit', value: "1", }
+                    // )
 
                     setOptions(tabledata)
                     console.log(options)
@@ -103,6 +227,26 @@ export default function Home() {
         }, 1000);
 
     }
+
+
+    // const handleSubmit = async () => {
+    //     e.preventDefault()
+    //     console.log(val)
+
+    //     const url = 'http://localhost:3000/api/visitor-count';
+    //     // const payload = { params: { val }}
+    //     const payload = "First test 1";
+    //     const response = await axios.get(url, payload)
+    //     if(response.data){
+    //       console.log(response.data[0])
+    //     }
+
+    //     // window.$key = response.data[0].key;
+
+    //     // router.push('/add-script');
+
+    //   }
+
 
     return (
         <div>
@@ -164,7 +308,8 @@ export default function Home() {
                 </header>
 
 
-                <div class="sec-wrapper pt-5 pb-5">
+                {/* *********************************************** */}
+                {/* <div class="sec-wrapper pt-5 pb-5">
                     <div class="container">
                         <div class="row">
                             <div class="col-12">
@@ -186,7 +331,80 @@ export default function Home() {
                             </div>
                         </div>
                     </div>
+                </div> */}
+                {/* ***************************************** */}
+                <div class="sec-wrapper pt-5 pb-5">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12">
+                                <h2 id="basicPrice" class="main-title">
+                                    User Journey Dashboard
+                        </h2>
+                            </div>
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="col-12 mt-60">
+                                <div class="c_card">
+                                    <div class="card-header d-flex justify-content-between align-items-center">
+                                        <div class="heading">
+                                            <h3 id="userJourneyName" class="title-1"> (innerHTML)</h3>
+
+                                        </div>
+                                        <a href="/editjourney" class="plan-cta">EDIT JOURNEY</a>
+                                    </div>
+
+                                    <div class="card-body" style={{ padding: '45px 0px' }}>
+                                        <div class="row align-items-center">
+                                            <div class="col-lg-6 col-md-6 col-12 col-sm-12 text-center">
+                                                <img src="assets/images/layer1only.png" style={{ width: '100%', maxWidth: '250px' }} class="img-fluid" alt="" />
+                                                <div class="input-group">
+                                                    {/* <h3 > Count</h3> */}
+                                                    <h3 id="layer1Count" style={{ marginLeft: '45px' }} class="title-1"> (innerHTML)</h3>
+                                                    <h3 id="layer1Name" style={{ marginLeft: '45px' }} class="title-1"> (innerHTML)</h3>
+                                                </div>
+
+                                                <img src="assets/images/layer2only.png" style={{ width: '100%', maxWidth: '250px' }} class="img-fluid" alt="" />
+                                                <div class="input-group">
+                                                    <h3 > 0</h3>
+                                                    <h3 id="layer2Name" style={{ marginLeft: '45px' }} class="title-1"> (innerHTML)</h3>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6 col-md-6 col-12 col-sm-12">
+                                                <form action="" class="user-journey-form-1">
+                                                    <div class="input-group">
+                                                        <div class="input-wrapper">
+                                                            <input type="text" name="" placeholder="Facebook Ad" id="" />
+                                                        </div>
+                                                    </div>
+                                                    <div class="input-group">
+                                                        <div class="input-wrapper">
+                                                            <input type="text" name="" placeholder="Landing page (Supply)" id="" />
+                                                        </div>
+                                                    </div>
+                                                    <div class="input-group">
+                                                        <div class="input-wrapper">
+                                                            <input type="text" name="" placeholder="Waitlist Page" id="" />
+                                                        </div>
+                                                    </div>
+                                                    <div class="input-group">
+                                                        <div class="input-wrapper">
+                                                            <input type="text" name="" placeholder="Referral Page" id="" />
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="text-center mt-5">
+                                    <a data-bs-toggle="modal" data-bs-target="#addJourney" class="cta"><i
+                                        class="fa fa-plus"></i>&nbsp;ADD A JOURNEY</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+                {/* ***************************************** */}
 
 
 
@@ -250,25 +468,37 @@ export default function Home() {
 
                                                         <div class="form-group">
                                                             <div class="select-wrap">
-                                                                <select 
-                                                                onChange={(e) => selectEvent()}
+                                                                <select
+                                                                    onChange={(e) => selectEvent(e)}
                                                                 // onClick={(e) => handleSaveJourney()}
-                                                                 name="" id="" value={global.$event}
-                                                                  >
-                                                                    {options.map((option) => (
-                                                                        <option value={option.value}>{option.label}</option>
-                                                                    ))}
-                                                                    {/* <option value="">Select Value</option>
-                                                                    <option value="">add data</option>
-                                                                    <option value="">Try it</option>
-                                                                    <option value="">Click Me1</option> */}
-                                                                    {/* <option value={option.value} selected={optionsState == option.value}>{option.label}</option> */}
+                                                                // name="" id="" value={global.$event}
+                                                                >
+
+                                                                    <option value="0">Click</option>
+                                                                    <option value="1">Visit</option>
+
+
                                                                 </select>
                                                                 <img src="assets/images/select-drop.svg" alt="" />
                                                             </div>
                                                         </div>
                                                         <div class="add-btn">
                                                             <button>+</button>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <div class="select-wrap">
+                                                                <select
+                                                                    // onChange={(e) => selectEvent()}
+                                                                    // onClick={(e) => handleSaveJourney()}
+                                                                    name="" id="" value={global.$event}
+                                                                >
+                                                                    {options.map((option) => (
+                                                                        <option value={option.value}>{option.label}</option>
+                                                                    ))}
+
+                                                                </select>
+                                                                <img src="assets/images/select-drop.svg" alt="" />
+                                                            </div>
                                                         </div>
                                                         <div class="form-group">
                                                             <div class="input-group">
@@ -286,13 +516,24 @@ export default function Home() {
                                                     <div class="add-inputs">
                                                         <div class="form-group">
                                                             <div class="input-group">
-                                                                <input type="text" placeholder="Url here" />
+                                                                <input
+                                                                    onKeyUp={(e) => handleClickSendUrl(e)}
+                                                                    type="text" placeholder="Url here" />
                                                             </div>
                                                         </div>
+
                                                         <div class="form-group">
                                                             <div class="select-wrap">
-                                                                <select name="" id="">
-                                                                    <option value="">Select Value</option>
+                                                                <select
+                                                                    onChange={(e) => selectEvent()}
+                                                                    // onClick={(e) => handleSaveJourney()}
+                                                                    name="" id="" value={global.$event}
+                                                                >
+
+                                                                    <option value="0">Click</option>
+                                                                    <option value="1">Visit</option>
+
+
                                                                 </select>
                                                                 <img src="assets/images/select-drop.svg" alt="" />
                                                             </div>
@@ -301,8 +542,23 @@ export default function Home() {
                                                             <button>+</button>
                                                         </div>
                                                         <div class="form-group">
+                                                            <div class="select-wrap">
+                                                                <select
+                                                                    onChange={(e) => selectEvent()}
+                                                                    // onClick={(e) => handleSaveJourney()}
+                                                                    name="" id="" value={global.$event}
+                                                                >
+                                                                    {options.map((option) => (
+                                                                        <option value={option.value}>{option.label}</option>
+                                                                    ))}
+
+                                                                </select>
+                                                                <img src="assets/images/select-drop.svg" alt="" />
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group">
                                                             <div class="input-group">
-                                                                <input type="text" placeholder="Name the first step" />
+                                                                <input onKeyUp={(e) => onKeyUpStepName(e)} type="text" placeholder="Name the first step" />
                                                             </div>
                                                         </div>
                                                     </div>

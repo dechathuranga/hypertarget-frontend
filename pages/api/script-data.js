@@ -32,6 +32,7 @@ export default async function handler(req, res) {
     elementId:req.body.elementId,
     eventType:req.body.eventType,
     innerText:req.body.innerText,
+    currentIp:req.body.currentIp,
     createDate:d
 
   }
