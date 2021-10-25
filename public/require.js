@@ -47,7 +47,7 @@ var queryString = myScript.src.replace(/^[^\?]+\??/,'');
 		
 		
 		};
-	// Http.send(JSON.stringify(data));
+	Http.send(JSON.stringify(data));
 	
 
 	Http.onreadystatechange = (e) => {

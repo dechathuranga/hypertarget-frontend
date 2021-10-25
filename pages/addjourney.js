@@ -16,7 +16,7 @@ export default function Home() {
                 'Accept': 'application/json, text/plain, */*',
                 'Content-Type': 'application/json'
             },
-            // body: JSON.stringify('10201')
+            body: JSON.stringify('10201')
         })
             .then(response => response.json())
             .then(response => {
@@ -39,7 +39,7 @@ export default function Home() {
                             'Accept': 'application/json, text/plain, */*',
                             'Content-Type': 'application/json'
                         },
-                        // body: JSON.stringify(response[0].innerText)
+                        body: JSON.stringify(response[0].innerText)
                     })
                         .then(response => response.json())
                         .then(response => {
@@ -62,7 +62,7 @@ export default function Home() {
                                 'Accept': 'application/json, text/plain, */*',
                                 'Content-Type': 'application/json'
                             },
-                            // body: JSON.stringify(response[0].url)
+                            body: JSON.stringify(response[0].url)
                         })
                             .then(response => response.json())
                             .then(response => {
@@ -183,7 +183,7 @@ export default function Home() {
                 'Accept': 'application/json, text/plain, */*',
                 'Content-Type': 'application/json'
             },
-            // body: JSON.stringify(data)
+            body: JSON.stringify(data)
         }).then((res) => {
             console.log('Response received')
             if (res.status === 200) {
@@ -232,7 +232,7 @@ export default function Home() {
                     'Accept': 'application/json, text/plain, */*',
                     'Content-Type': 'application/json'
                 },
-                // body: JSON.stringify(e.target.value)
+                body: JSON.stringify(e.target.value)
             })
                 .then(response => response.json())
                 .then(response => {

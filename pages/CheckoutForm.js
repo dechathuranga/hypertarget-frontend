@@ -68,7 +68,7 @@ const CheckoutForm = ({ paymentIntent }) => {
         'Accept': 'application/json, text/plain, */*',
         'Content-Type': 'application/json'
       },
-      // body: JSON.stringify(data)
+      body: JSON.stringify(data)
     }).then((res) => {
       console.log('Response received')
       if (res.status === 200) {
