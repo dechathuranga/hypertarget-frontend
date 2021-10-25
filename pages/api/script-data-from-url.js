@@ -1,16 +1,16 @@
-import { connectToDatabase } from "../../util/mongodb";
-import Head from 'next/head'
+// import { connectToDatabase } from "../../util/mongodb";
+// import Head from 'next/head'
 
-export default async (req, res) => {
-  const { db } = await connectToDatabase();
+// export default async (req, res) => {
+//   const { db } = await connectToDatabase();
 
-console.log(req.body)
+// console.log(req.body)
 
-    const script_data = await db
-    .collection("script_data")
-    .find({"url": req.body})
-    // .sort({ metacritic: -1 })
-    // .limit(1)
-    .toArray();
-  res.json(script_data);
-};
+//     const script_data = await db
+//     .collection("script_data")
+//     .find({"url": req.body})
+//     // .sort({ metacritic: -1 })
+//     // .limit(1)
+//     .toArray();
+//   res.json(script_data);
+// };
