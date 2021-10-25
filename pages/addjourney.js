@@ -28,8 +28,58 @@ export default function Home() {
                 if (0 < response.length) {
                     document.getElementById("userJourneyName").innerHTML = response[0].journeyName;
                     document.getElementById("layer1Name").innerHTML = response[0].stepName;
-                    document.getElementById("layer1Count").innerHTML = 2;
+                    // document.getElementById("layer1Count").innerHTML = 2;
                     // document.getElementById("layer2Name").innerHTML = response[0].stepName;
+
+                    ///////////////////////////////////////////
+                    if(response[0].event == 0){
+                    fetch('/api/visitor-count-by-click', {
+                        method: 'POST',
+                        headers: {
+                            'Accept': 'application/json, text/plain, */*',
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify(response[0].innerText)
+                    })
+                        .then(response => response.json())
+                        .then(response => {
+                            console.log("** - ", response)
+                            setCount: response.length;
+                            // alert(response.length);
+                            // alert(count);
+                            window.$counts = response.length;
+                            if (0 < response.length) {
+                                // document.getElementById("userJourneyName").innerHTML = response[0].journeyName;
+                                // document.getElementById("layer1Name").innerHTML = response[0].stepName;
+                                document.getElementById("layer1Count").innerHTML = response.length/2;
+                                // document.getElementById("layer2Name").innerHTML = response[0].stepName;
+                            }
+                        });
+                    }else{
+                        fetch('/api/visitor-count', {
+                            method: 'POST',
+                            headers: {
+                                'Accept': 'application/json, text/plain, */*',
+                                'Content-Type': 'application/json'
+                            },
+                            body: JSON.stringify(response[0].url)
+                        })
+                            .then(response => response.json())
+                            .then(response => {
+                                console.log("** - ", response)
+                                setCount: response.length;
+                                // alert(response.length);
+                                // alert(count);
+                                window.$counts = response.length;
+                                if (0 < response.length) {
+                                    // document.getElementById("userJourneyName").innerHTML = response[0].journeyName;
+                                    // document.getElementById("layer1Name").innerHTML = response[0].stepName;
+                                    document.getElementById("layer1Count").innerHTML = response.length/2;
+                                    // document.getElementById("layer2Name").innerHTML = response[0].stepName;
+                                }
+                            });
+                    }
+                    ///////////////////////////////////////////
                 }
             });
 
@@ -121,9 +171,11 @@ export default function Home() {
             key: window.$key,
             layerNo: 1,
             event: window.$event,
-            // event: "Try it",
+            valueInnerText: window.$valueInnerText,
             stepName: window.$stepName,
         }
+
+        console.log(data)
 
         fetch('/api/add-journey', {
             method: 'POST',
@@ -153,10 +205,13 @@ export default function Home() {
     const selectEvent = (e) => {
         console.log("event");
         console.log(e.target.value);
-        // console.log(global.$event);
-        // console.log(e.target.value);
-        // console.log(window.$event);
         window.$event = e.target.value;
+    }
+
+    const selectEventInnerText = (e) => {
+        console.log("event");
+        console.log(e.target.value);
+        window.$valueInnerText = e.target.value;
     }
 
     const handleClickSendUrl = async (e) => {
@@ -488,7 +543,7 @@ export default function Home() {
                                                         <div class="form-group">
                                                             <div class="select-wrap">
                                                                 <select
-                                                                    // onChange={(e) => selectEvent()}
+                                                                    onChange={(e) => selectEventInnerText(e)}
                                                                     // onClick={(e) => handleSaveJourney()}
                                                                     name="" id="" value={global.$event}
                                                                 >
@@ -544,9 +599,9 @@ export default function Home() {
                                                         <div class="form-group">
                                                             <div class="select-wrap">
                                                                 <select
-                                                                    onChange={(e) => selectEvent()}
+                                                                    onChange={(e) => selectEventInnerText()}
                                                                     // onClick={(e) => handleSaveJourney()}
-                                                                    name="" id="" value={global.$event}
+                                                                    name="" id="" value={global.$valueInnerText}
                                                                 >
                                                                     {options.map((option) => (
                                                                         <option value={option.value}>{option.label}</option>
