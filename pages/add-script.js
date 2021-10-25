@@ -30,7 +30,7 @@ export default function Home() {
         'Accept': 'application/json, text/plain, */*',
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify(data1)
+      // body: JSON.stringify(data1)
     }).then((res) => {
       console.log('Response received')
       if (res.status === 200) {
