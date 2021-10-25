@@ -10,7 +10,7 @@ import getConfig from 'next/config'
 // import { signIn, signOut, useSession } from "next-auth/client";
 import { providers, signIn, getSession, csrfToken } from "next-auth/client";
 
-import CheckoutForm from "./CheckoutForm";
+// import CheckoutForm from "./CheckoutForm";
 
 console.log("*****----**-*-*--")
 console.log(global.$type);
@@ -191,7 +191,7 @@ const onKeyUpEmail = (e) => {
                 <div class="form-group">
                   <label for="">Card Details *</label>
                   <Elements stripe={stripePromise}>
-                    <CheckoutForm paymentIntent={paymentIntent} />
+                    {/* <CheckoutForm paymentIntent={paymentIntent} /> */}
                   </Elements>
                
                 </div>

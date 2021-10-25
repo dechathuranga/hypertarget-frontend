@@ -40,43 +40,6 @@ export default function Home() {
     }
 
     const handleSubmit = () => { 
-        // e.preventDefault()
-        console.log('Sending')
-        const stripe = await getStripe();
-    await stripe.redirectToCheckout({ sessionId: id });
-
-
-    const {
-      data: { id },
-    } = await axios.post('/api/checkout_sessions', {
-      items: Object.entries(cartDetails).map(([_, { id, quantity }]) => ({
-        price: id,
-        quantity,
-      })),
-    });
-
-      // let data = {
-      //     name : 'test',
-      //     email : window.$email,
-      //     message : 'hi'
-      //   }
-      // fetch('/api/mail', {
-      //     method: 'POST',
-      //     headers: {
-      //       'Accept': 'application/json, text/plain, */*',
-      //       'Content-Type': 'application/json'
-      //     },
-      //     body: JSON.stringify(data)
-      //   }).then((res) => {
-      //     console.log('Response received')
-      //     if (res.status === 200) {
-      //       console.log('Response succeeded!')
-      //       setSubmitted(true)
-      //       setName('')
-      //       setEmail('')
-      //       setBody('')
-      //     }
-      //   })
       }
 
     const handleClickSubmit = () => {
