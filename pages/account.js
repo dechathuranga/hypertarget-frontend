@@ -22,7 +22,7 @@ export default function Home() {
               <span className="notifi">
                 <img src="assets/images/notifi.png" alt="" />
               </span>
-              <a href>
+              <a >
                 <div className="profile-wrap">
                   <div className="profile-img">
                     <img src="assets/images/profile.jpg" alt="" />
@@ -67,7 +67,7 @@ export default function Home() {
                           <div className="prof-icons">
                             <a>
                               <i className="fas fa-pencil-alt" /></a>
-                            <a href>
+                            <a >
                               <i className="fas fa-trash" /></a>
                           </div>
                         </div>
@@ -149,7 +149,7 @@ export default function Home() {
                         </div>
                       </div>
                       <div className="d-flex align-items-center" style={{marginTop: '25px', paddingBottom: '30px', paddingLeft: '20px'}}>
-                        <a href className="plan-cta">No plan selected</a>
+                        <a  className="plan-cta">No plan selected</a>
                         <a href="/subscription" className="cta " style={{marginLeft: '20px'}}>CHANGE PLAN</a>
                       </div>
                     </div>
