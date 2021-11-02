@@ -4,6 +4,7 @@ import { useRouter } from "next/router";
 import login from './api/login';
 import getConfig from 'next/config'
 import React, { useEffect, useRef } from "react";
+import Image from 'next/image';
 
 
 export default function Home() {
@@ -90,9 +91,9 @@ export default function Home() {
         <nav className="main-nav landing-nav">
           <div className="nav-wrapper">
             <div className="d-flex">
-              <img src="assets/images/menu-bar.svg" className="menu-bar" alt="" />
+               <Image src="assets/images/menu-bar.svg" className="menu-bar" alt="" />
               <div className="logo-wrapper">
-                <img src="assets/images/logo.svg" alt="" />
+                 <Image src="assets/images/logo.svg" alt="" />
               </div>
             </div>
             <ul className="nav-list">
@@ -110,10 +111,10 @@ export default function Home() {
           <div className="mobile-nav">
             <div className="menu-header">
               <div className="logo-wrapper">
-                <img src="assets/images/logo.svg" alt="" />
+                 <Image src="assets/images/logo.svg" alt="" />
               </div>
               <div className="close">
-                <img src="assets/images/menu-close.svg" alt="" />
+                 <Image src="assets/images/menu-close.svg" alt="" />
 
               </div>
             </div>
@@ -271,7 +272,7 @@ export default function Home() {
           <div className="container">
             <div className="row justify-content-center">
               <div className="col-lg-4 col-md-4 col-sm-12 col-12">
-                <img className="ft-logo" src="assets/images/logo.svg" alt="" />
+                 <Image className="ft-logo" src="assets/images/logo.svg" alt="" />
                 <p className="para mt-20">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
                 </p>

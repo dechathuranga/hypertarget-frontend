@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Image from 'next/image';
 
 export default function Home() {
   return (
@@ -12,20 +13,20 @@ export default function Home() {
         <nav className="main-nav">
           <div className="nav-wrapper">
             <div className="logo-wrapper">
-              <img src="assets/images/logo.svg" alt="" />
+               <Image src="assets/images/logo.svg" alt="" />
             </div>
             <div className="right-side">
               <div className="search-bar-wrapper">
-                <img src="assets/images/search-icon.png" alt="" />
+                 <Image src="assets/images/search-icon.png" alt="" />
                 <input type="text" placeholder="Search" name id />
               </div>
               <span className="notifi">
-                <img src="assets/images/notifi.png" alt="" />
+                 <Image src="assets/images/notifi.png" alt="" />
               </span>
               <a >
                 <div className="profile-wrap">
                   <div className="profile-img">
-                    <img src="assets/images/profile.jpg" alt="" />
+                     <Image src="assets/images/profile.jpg" alt="" />
                   </div>
                   <div className="profile-det">
                     <h5 className="name">
@@ -62,7 +63,7 @@ export default function Home() {
                       <div className="profile-devide">
                         <div className="profile-wrapper">
                           <div className="prof-img">
-                            <img src="assets/images/profile.jpg" alt="" />
+                             <Image src="assets/images/profile.jpg" alt="" />
                           </div>
                           <div className="prof-icons">
                             <a>
@@ -121,7 +122,7 @@ export default function Home() {
                         </div>
                       </div>
                       <div className="profile-devide no-grid" style={{borderBottom: '0px !important'}}>
-                        <img src="assets/images/debit.jpg" style={{maxWidth: '300px'}} alt="" />
+                         <Image src="assets/images/debit.jpg" style={{maxWidth: '300px'}} alt="" />
                         <br />
                         <div className="row " style={{marginTop: '20px'}}>
                           <div className="col-lg-6 col-md-12 col-sm-12 col-12">

@@ -3,6 +3,7 @@ import React, {useState, useEffect, useRef } from "react";
 import { signIn, signOut, useSession, getSession } from "next-auth/client";
 import axios from 'axios';
 import { useRouter } from "next/router";
+import Image from 'next/image';
 
 export default function Home() {
 
@@ -49,7 +50,7 @@ export default function Home() {
     <div>
       <Head>
         <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        {/* <meta http-equiv="X-UA-Compatible" content="IE=edge" /> */}
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Hypertarget</title>
         {/* <!-- favicon --> */}
@@ -84,20 +85,20 @@ export default function Home() {
               <nav className="main-nav">
                 <div className="nav-wrapper">
                   <div className="logo-wrapper">
-                    <img src="assets/images/logo.svg" alt="" />
+                     <Image src="assets/images/logo.svg" alt="" />
                   </div>
                   <div className="right-side">
                     <div className="search-bar-wrapper">
-                      <img src="assets/images/search-icon.png" alt="" />
+                       <Image src="assets/images/search-icon.png" alt="" />
                       <input type="text" placeholder="Search" name id />
                     </div>
                     <span className="notifi">
-                      <img src="assets/images/notifi.png" alt="" />
+                       <Image src="assets/images/notifi.png" alt="" />
                     </span>
                     <a>
                       <div className="profile-wrap">
                         <div className="profile-img">
-                          <img src="assets/images/profile.jpg" alt="" />
+                           <Image src="assets/images/profile.jpg" alt="" />
                         </div>
                         <div className="profile-det">
                           <h5 className="name">

@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Image from 'next/image';
 
 console.log(global.$type);
 console.log(global.$price);
@@ -14,7 +15,7 @@ export default function Home() {
     <div>
       <Head>
       <meta charset="UTF-8"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    {/* {/* <meta http-equiv="X-UA-Compatible" content="IE=edge"/> */} */}
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Hypertarget</title>
     {/* <!-- favicon --> */}
@@ -36,9 +37,9 @@ export default function Home() {
       <nav className="main-nav landing-nav">
         <div className="nav-wrapper">
           <div className="d-flex">
-            <img src="assets/images/menu-bar.svg" className="menu-bar" alt="" />
+             {/* <Image width={100} height={100} src="/assets/images/menu-bar.svg" className="menu-bar" alt="" /> */}
             <div className="logo-wrapper">
-              <img src="assets/images/logo.svg" alt="" />
+               {/* <Image width={100} height={100} src="assets/images/logo.svg" alt="" /> */}
             </div>
           </div>
           <ul className="nav-list">
@@ -56,10 +57,10 @@ export default function Home() {
         <div className="mobile-nav">
           <div className="menu-header">
             <div className="logo-wrapper">
-              <img src="assets/images/logo.svg" alt="" />
+               {/* <Image width={100} height={100} src="/assets/images/logo.svg" alt="" /> */}
             </div>
             <div className="close">
-              <img src="assets/images/menu-close.svg" alt="" />
+               {/* <Image  width={100} height={100} src="/assets/images/menu-close.svg" alt="" /> */}
             </div>
           </div>
           <ul className="nav-list">
@@ -76,7 +77,7 @@ export default function Home() {
           <div className="row">
             <div className="col-12 text-center">
               <div className="c_card check-email-wrap">
-                <img style={{marginLeft: 'auto', marginRight: 'auto' }} src="assets/images/email.svg" alt="" />
+                 {/* <Image width={100} height={100} style={{marginLeft: 'auto', marginRight: 'auto' }} src="/assets/images/email.svg" alt="" /> */}
                 <h4 className="c_head">Please check your email</h4>
                 <p className="c_para">
                   By using passwordless login it increases the security of your account
@@ -90,7 +91,7 @@ export default function Home() {
         <div className="container">
           <div className="row justify-content-center">
             <div className="col-lg-4 col-md-4 col-sm-12 col-12">
-              <img className="ft-logo" src="assets/images/logo.svg" alt="" />
+               {/* <Image width={100} height={100} className="ft-logo" src="/assets/images/logo.svg" alt="" /> */}
               <p className="para mt-20">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
               </p>

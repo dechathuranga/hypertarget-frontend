@@ -1,11 +1,12 @@
 import Head from 'next/head'
+import Image from 'next/image';
 
 export default function Home() {
   return (
     <div>
       <Head>
       <meta charset="UTF-8"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    {/* <meta http-equiv="X-UA-Compatible" content="IE=edge"/> */}
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Hypertarget</title>
     {/* <!-- favicon --> */}
@@ -25,31 +26,31 @@ export default function Home() {
     <link rel="stylesheet" href="assets/css/code.css"/>
       </Head>
      
-<body class="bg-lightblue">
+<body className="bg-lightblue">
     <header>
-        <nav class="main-nav">
-            <div class="nav-wrapper">
-                <div class="logo-wrapper">
-                    <img src="assets/images/logo.svg" alt=""/>
+        <nav className="main-nav">
+            <div className="nav-wrapper">
+                <div className="logo-wrapper">
+                     <Image src="assets/images/logo.svg" alt=""/>
                 </div>
-                <div class="right-side">
-                    <div class="search-bar-wrapper">
-                        <img src="assets/images/search-icon.png" alt=""/>
+                <div className="right-side">
+                    <div className="search-bar-wrapper">
+                         <Image src="assets/images/search-icon.png" alt=""/>
                         <input type="text" placeholder="Search" name="" id="" />
                     </div>
-                    <span class="notifi">
-                        <img src="assets/images/notifi.png" alt=""/>
+                    <span className="notifi">
+                         <Image src="assets/images/notifi.png" alt=""/>
                     </span>
                     <a href="">
-                        <div class="profile-wrap">
-                            <div class="profile-img">
-                                <img src="assets/images/profile.jpg" alt=""/>
+                        <div className="profile-wrap">
+                            <div className="profile-img">
+                                 <Image src="assets/images/profile.jpg" alt=""/>
                             </div>
-                            <div class="profile-det">
-                                <h5 class="name">
+                            <div className="profile-det">
+                                <h5 className="name">
                                     John Doe
                                 </h5>
-                                <p class="desig">CEO</p>
+                                <p className="desig">CEO</p>
                             </div>
                         </div>
                     </a>
@@ -59,48 +60,48 @@ export default function Home() {
     </header>
 
 
-        <div class="sec-wrapper pt-5 pb-5">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <h2 class="main-title">
+        <div className="sec-wrapper pt-5 pb-5">
+            <div className="container">
+                <div className="row">
+                    <div className="col-12">
+                        <h2 className="main-title">
                             User Journey Dashboard
                         </h2>
                     </div>
                 </div>
-                <div class="row justify-content-center">
-                    <div class="col-12 mt-60">
-                        <div class="c_card">
-                            <div class="card-header d-flex justify-content-between align-items-center">
-                                <div class="heading">
-                                    <h3 class="title-1">User Journey 1</h3>
+                <div className="row justify-content-center">
+                    <div className="col-12 mt-60">
+                        <div className="c_card">
+                            <div className="card-header d-flex justify-content-between align-items-center">
+                                <div className="heading">
+                                    <h3 className="title-1">User Journey 1</h3>
                                 </div>
-                                <a href="/editjourney" class="plan-cta">EDIT JOURNEY</a>
+                                <a href="/editjourney" className="plan-cta">EDIT JOURNEY</a>
                             </div>
-                            <div class="card-body" style={{padding : "45px 0px"}}>
-                                <div class="row align-items-center">
-                                    <div class="col-lg-6 col-md-6 col-12 col-sm-12 text-center">
-                                        <img src="assets/images/layer.png" style={{width: "100%", maxWidth: "250px"}} class="img-fluid" alt=""/>
+                            <div className="card-body" style={{padding : "45px 0px"}}>
+                                <div className="row align-items-center">
+                                    <div className="col-lg-6 col-md-6 col-12 col-sm-12 text-center">
+                                         <Image src="assets/images/layer.png" style={{width: "100%", maxWidth: "250px"}} className="img-fluid" alt=""/>
                                     </div>
-                                    <div class="col-lg-6 col-md-6 col-12 col-sm-12">
-                                        <form action="" class="user-journey-form-1">
-                                            <div class="input-group">
-                                                <div class="input-wrapper">
+                                    <div className="col-lg-6 col-md-6 col-12 col-sm-12">
+                                        <form action="" className="user-journey-form-1">
+                                            <div className="input-group">
+                                                <div className="input-wrapper">
                                                     <input type="text" name="" placeholder="Facebook Ad" id=""/>
                                                 </div>
                                             </div>
-                                            <div class="input-group">
-                                                <div class="input-wrapper">
+                                            <div className="input-group">
+                                                <div className="input-wrapper">
                                                     <input type="text" name="" placeholder="Landing page (Supply)" id=""/>
                                                 </div>
                                             </div>
-                                            <div class="input-group">
-                                                <div class="input-wrapper">
+                                            <div className="input-group">
+                                                <div className="input-wrapper">
                                                     <input type="text" name="" placeholder="Waitlist Page" id=""/>
                                                 </div>
                                             </div>
-                                            <div class="input-group">
-                                                <div class="input-wrapper">
+                                            <div className="input-group">
+                                                <div className="input-wrapper">
                                                     <input type="text" name="" placeholder="Referral Page" id=""/>
                                                 </div>
                                             </div>
@@ -109,8 +110,8 @@ export default function Home() {
                                 </div>
                             </div>
                         </div>
-                        <div class="text-center mt-5">
-                        <a href="/addjourney" class="cta"><i class="fa fa-plus"></i>&nbsp;ADD A JOURNEY</a>
+                        <div className="text-center mt-5">
+                        <a href="/addjourney" className="cta"><i className="fa fa-plus"></i>&nbsp;ADD A JOURNEY</a>
                             </div>
                     </div>
                 </div>
@@ -120,15 +121,15 @@ export default function Home() {
 
 
     {/* <!-- Jquery Script v --> */}
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    {/* <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> */}
     {/* <!-- jquery step js --> */}
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-steps/1.1.0/jquery.steps.js"></script>
+    {/* <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-steps/1.1.0/jquery.steps.js"></script> */}
     {/* <!-- jquery validate --> */}
-    <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.15.0/jquery.validate.js"></script>
+    {/* <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.15.0/jquery.validate.js"></script> */}
     {/* <!-- bootstrp --> */}
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
+    {/* <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script> */}
     {/* <!-- custom js --> */}
-    <script src="assets/js/app.js"></script>
+    {/* <script src="assets/js/app.js"></script> */}
 </body>
     </div>
   )

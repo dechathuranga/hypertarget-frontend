@@ -1,7 +1,8 @@
 import Head from 'next/head'
 import React, { useEffect, useRef } from "react";
 import ReactDOM from 'react-dom';
-import Script from 'next/script'
+import Script from 'next/script';
+import Image from 'next/image';
 
 export default function Home() {
 
@@ -39,31 +40,31 @@ export default function Home() {
             </Head>
 
 
-            <body class="bg-lightblue">
+            <body className="bg-lightblue">
                 <header>
-                    <nav class="main-nav">
-                        <div class="nav-wrapper">
-                            <div class="logo-wrapper">
-                                <img src="assets/images/logo.svg" alt="" />
+                    <nav className="main-nav">
+                        <div className="nav-wrapper">
+                            <div className="logo-wrapper">
+                                 <Image src="assets/images/logo.svg" alt="" />
                             </div>
-                            <div class="right-side">
-                                <div class="search-bar-wrapper">
-                                    <img src="assets/images/search-icon.png" alt="" />
+                            <div className="right-side">
+                                <div className="search-bar-wrapper">
+                                     <Image src="assets/images/search-icon.png" alt="" />
                                     <input type="text" placeholder="Search" name="" id="" />
                                 </div>
-                                <span class="notifi">
-                                    <img src="assets/images/notifi.png" alt="" />
+                                <span className="notifi">
+                                     <Image src="assets/images/notifi.png" alt="" />
                                 </span>
                                 <a href="">
-                                    <div class="profile-wrap">
-                                        <div class="profile-img">
-                                            <img src="assets/images/profile.jpg" alt="" />
+                                    <div className="profile-wrap">
+                                        <div className="profile-img">
+                                             <Image src="assets/images/profile.jpg" alt="" />
                                         </div>
-                                        <div class="profile-det">
-                                            <h5 class="name">
+                                        <div className="profile-det">
+                                            <h5 className="name">
                                                 John Doe
                                 </h5>
-                                            <p class="desig">CEO</p>
+                                            <p className="desig">CEO</p>
                                         </div>
                                     </div>
                                 </a>
@@ -73,28 +74,28 @@ export default function Home() {
                 </header>
 
 
-                <div class="sec-wrapper pt-5 pb-5">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-12">
-                                <h2 class="main-title">
+                <div className="sec-wrapper pt-5 pb-5">
+                    <div className="container">
+                        <div className="row">
+                            <div className="col-12">
+                                <h2 className="main-title">
                                     User Journey Dashboard
                     </h2>
                             </div>
                         </div>
-                        <div class="row justify-content-center">
-                            <div class="col-12 mt-100">
-                                <img src="assets/images/stack.png" class="img-fluid stack" alt="" />
-                                <h2 class="main-title text-center pd-30">
+                        <div className="row justify-content-center">
+                            <div className="col-12 mt-100">
+                                 <Image src="assets/images/stack.png" className="img-fluid stack" alt="" />
+                                <h2 className="main-title text-center pd-30">
                                     User Journey Dashboard
                     </h2>
-                                <div class="text-center mt-5">
-                                    <button class="btn bordered filter-btn" data-bs-toggle="modal" data-bs-target="#addFilter">
-                                        <img src="assets/images/filter-icon.svg" alt="" />
+                                <div className="text-center mt-5">
+                                    <button className="btn bordered filter-btn" data-bs-toggle="modal" data-bs-target="#addFilter">
+                                         <Image src="assets/images/filter-icon.svg" alt="" />
                                         add filter
                                 </button>
-                                    <a ref={buttonRef} data-bs-toggle="modal" data-bs-target="#completeAlert" class="cta"><i
-                                        class="fa fa-plus"></i>&nbsp;ADD A JOURNEY</a>
+                                    <a ref={buttonRef} data-bs-toggle="modal" data-bs-target="#completeAlert" className="cta"><i
+                                        className="fa fa-plus"></i>&nbsp;ADD A JOURNEY</a>
                                 </div>
                             </div>
                         </div>
@@ -103,14 +104,14 @@ export default function Home() {
 
 
                 {/* <!-- Modal --> */}
-                <div class="modal info-modal fade" id="completeAlert" tabindex="-1" aria-labelledby="exampleModalLabel"
+                <div className="modal info-modal fade" id="completeAlert" tabindex="-1" aria-labelledby="exampleModalLabel"
                     aria-hidden="true">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-body text-center">
-                                <img style={{marginLeft: 'auto', marginRight: 'auto' }} src="assets/images/check-big.svg" alt="" />
-                                <h4 class="head">Installation Complete!</h4>
-                                <button class="btn-blue" onclick="location.href='addjourney.html';">
+                    <div className="modal-dialog">
+                        <div className="modal-content">
+                            <div className="modal-body text-center">
+                                 <Image style={{marginLeft: 'auto', marginRight: 'auto' }} src="assets/images/check-big.svg" alt="" />
+                                <h4 className="head">Installation Complete!</h4>
+                                <button className="btn-blue" onclick="location.href='addjourney.html';">
                                     Create Your first journey
                     </button>
                             </div>
