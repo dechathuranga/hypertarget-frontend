@@ -94,7 +94,7 @@ export default function Home() {
                     <span className="notifi">
                       <img src="assets/images/notifi.png" alt="" />
                     </span>
-                    <a href>
+                    <a>
                       <div className="profile-wrap">
                         <div className="profile-img">
                           <img src="assets/images/profile.jpg" alt="" />
