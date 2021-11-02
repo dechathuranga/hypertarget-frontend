@@ -38,11 +38,11 @@ export default function Home() {
             </div>
           </div>
           <ul className="nav-list">
-            <li><a href>About</a></li>
-            <li><a href>Features</a></li>
+            <li><a >About</a></li>
+            <li><a >Features</a></li>
             <li><a href="/pricing">Pricing</a></li>
-            <li><a href>Testimonials</a></li>
-            <li><a href>Help</a></li>
+            <li><a >Testimonials</a></li>
+            <li><a >Help</a></li>
           </ul>
           <ul className="nav-btns">
             <li><a  className="cta-secondary">Sign In</a></li>
@@ -59,11 +59,11 @@ export default function Home() {
             </div>
           </div>
           <ul className="nav-list">
-            <li><a href>About</a></li>
-            <li><a href>Features</a></li>
+            <li><a >About</a></li>
+            <li><a >Features</a></li>
             <li><a href="subscription.html">Pricing</a></li>
-            <li><a href>Testimonials</a></li>
-            <li><a href>Help</a></li>
+            <li><a >Testimonials</a></li>
+            <li><a >Help</a></li>
           </ul>
         </div>
       </nav>
@@ -81,7 +81,7 @@ export default function Home() {
                   Hypertarget accelerate your business growth with an insightful dashboard that delivers
                   actionable, visual insights. Our data analytics software is here to help you out!
                 </p>
-                <a href="subscription.html" className="cta-primary cta-shadow cta-lg">Get Started</a>
+                <a  href="/pricing" className="cta-primary cta-shadow cta-lg">Get Started</a>
               </div>
             </div>
             {/* col-2 */}
@@ -412,9 +412,9 @@ export default function Home() {
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
               </p>
               <ul className="social-links">
-                <li><a href><i className="fab fa-facebook" /></a></li>
-                <li><a href><i className="fab fa-twitter" /></a></li>
-                <li><a href><i className="fab fa-instagram" /></a></li>
+                <li><a ><i className="fab fa-facebook" /></a></li>
+                <li><a ><i className="fab fa-twitter" /></a></li>
+                <li><a ><i className="fab fa-instagram" /></a></li>
               </ul>
               <p className="copy-text">
                 ©2021 HYPERTARGET
@@ -425,12 +425,12 @@ export default function Home() {
                 Product
               </h4>
               <ul className="ft-links">
-                <li><a href>Download</a></li>
-                <li><a href>Pricing</a></li>
-                <li><a href>Locations</a></li>
-                <li><a href>Server</a></li>
-                <li><a href>Countries</a></li>
-                <li><a href>Blog</a></li>
+                <li><a  >Download</a></li>
+                <li><a  >Pricing</a></li>
+                <li><a  >Locations</a></li>
+                <li><a  >Server</a></li>
+                <li><a  >Countries</a></li>
+                <li><a  >Blog</a></li>
               </ul>
             </div>
             <div className="col-lg-2 col-md-2 col-sm-4 col-12">
@@ -438,12 +438,12 @@ export default function Home() {
                 Feature
               </h4>
               <ul className="ft-links">
-                <li><a href>Menu 1</a></li>
-                <li><a href>Menu 1</a></li>
-                <li><a href>Menu 1</a></li>
-                <li><a href>Menu 1</a></li>
-                <li><a href>Menu 1</a></li>
-                <li><a href>Menu 1</a></li>
+                <li><a  >Menu 1</a></li>
+                <li><a  >Menu 1</a></li>
+                <li><a  >Menu 1</a></li>
+                <li><a  >Menu 1</a></li>
+                <li><a  >Menu 1</a></li>
+                <li><a  >Menu 1</a></li>
               </ul>
             </div>
             <div className="col-lg-2 col-md-2 col-sm-4 col-12">
@@ -451,8 +451,8 @@ export default function Home() {
                 Earn Money
               </h4>
               <ul className="ft-links">
-                <li><a href>Affiliate</a></li>
-                <li><a href>Become Partner</a></li>
+                <li><a  >Affiliate</a></li>
+                <li><a  >Become Partner</a></li>
               </ul>
             </div>
           </div>
