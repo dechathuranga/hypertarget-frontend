@@ -45,8 +45,8 @@ export default function Home() {
             <li><a href>Help</a></li>
           </ul>
           <ul className="nav-btns">
-            <li><a href className="cta-secondary">Sign In</a></li>
-            <li><a href className="cta-primary">Sign Up</a></li>
+            <li><a  className="cta-secondary">Sign In</a></li>
+            <li><a  className="cta-primary">Sign Up</a></li>
           </ul>
         </div>
         <div className="mobile-nav">
@@ -395,7 +395,7 @@ export default function Home() {
                 </h4>
               </div>
               <div className="col-lg-6 d-flex justify-content-end offset-lg-1 offset-md-1 col-md-6 col-sm-12 col-12 banner-cta-contain">
-                <a href className="cta-primary cta-lg cta-shadow">
+                <a  className="cta-primary cta-lg cta-shadow">
                   Partner with Hypertarget Today!
                 </a>
               </div>

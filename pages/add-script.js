@@ -143,7 +143,7 @@ export default function Home() {
                                   <textarea readOnly defaultValue={"<script src = \"./base/require.js?" + global.$key + "\" type = \"text/javascript\"/></script>"} />
                                 </div>
                               </div>
-                              <a href className="plan-cta animate__animated animate__animated animate__flipInX">Email Code instructions</a>
+                              <a  className="plan-cta animate__animated animate__animated animate__flipInX">Email Code instructions</a>
                               <div className="d-flex justify-content-end">
                                 <a onClick={(e) => handleTestConnection()} className="cta animate__animated animate__animated animate__flipInXp">Test Connection</a>
                               </div>
