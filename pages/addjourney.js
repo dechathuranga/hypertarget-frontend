@@ -488,10 +488,10 @@ export default function Home() {
                                         <div className="col-lg-3 col-md-3 col-sm-3 col-12">
                                             <div className="form-group">
                                                 <div className="radio-wrap">
-                                                    <label for=""> Domain</label>
+                                                    <label htmlFor=""> Domain</label>
                                                     <div className="switch">
                                                         <input type="checkbox" checked="true" id="toggleAll" />
-                                                        <label for="toggleAll"></label>
+                                                        <label htmlFor="toggleAll"></label>
                                                     </div>
                                                 </div>
                                             </div>
@@ -548,7 +548,7 @@ export default function Home() {
                                                                     // onClick={(e) => handleSaveJourney()}
                                                                     name="" id="" value={global.$event}
                                                                 >
-                                                                    {options.map((option) => ( <option value={option.value}>{option.label}</option> ))}
+                                                                    {options.map((option) => ( <option key={option.value} value={option.value}>{option.label}</option> ))}
 
                                                                 </select>
                                                                  <Image src="assets/images/select-drop.svg" alt="" />
@@ -603,7 +603,7 @@ export default function Home() {
                                                                     name="" id="" value={global.$valueInnerText}
                                                                 >
                                                                     {options.map((option) => (
-                                                                        <option value={option.value}>{option.label}</option>
+                                                                        <option key={option.value} value={option.value}>{option.label}</option>
                                                                     ))}
 
                                                                 </select>

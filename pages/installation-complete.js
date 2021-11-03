@@ -104,7 +104,7 @@ export default function Home() {
 
 
                 {/* <!-- Modal --> */}
-                <div className="modal info-modal fade" id="completeAlert" tabindex="-1" aria-labelledby="exampleModalLabel"
+                <div className="modal info-modal fade" id="completeAlert" tabIndex="-1" aria-labelledby="exampleModalLabel"
                     aria-hidden="true">
                     <div className="modal-dialog">
                         <div className="modal-content">
@@ -128,7 +128,7 @@ export default function Home() {
                 {/* <!-- bootstrp --> */}
                 {/* <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script> */}
                 {/* <!-- custom js --> */}
-                <script src="assets/js/app.js"></script>
+                {/* <script src="assets/js/app.js"></script> */}
                 {/* <script>
     $(document).ready(function(){
         $("#completeAlert").modal('show');
