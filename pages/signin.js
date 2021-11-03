@@ -27,11 +27,14 @@ export default function SignIn({ providers, csrfToken }) {
           >
             <Input name="csrfToken" type="hidden" defaultValue={csrfToken} />
            
-              <Input type="text" type="hidden" id="email" name="email" defaultValue={global.$email}/>
+              <Input type="text" 
+              // type="hidden" 
+              id="email"
+               name="email" defaultValue={global.$email}/>
             
             <Button  
             ref={buttonRef}
-            type="hidden"
+            // type="hidden"
             type="submit"></Button>
           </form>
 
