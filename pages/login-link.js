@@ -80,7 +80,7 @@ export default function Home() {
                         sign in as
                     </p>
                     <h4 className="fw-bold mb-5">dechathuranga@gmail.com</h4>
-					<button className="btn btn-rounded filter-btn mt-20" onclick="window.location.href = 'error.html';">
+					<button className="btn btn-rounded filter-btn mt-20" onClick="window.location.href = 'error.html';">
 					Sign in
                     </button>
                     <p className="mt-3 fw-light"><small>IF you did not request this email you can safely ignore it.</small></p>
@@ -149,10 +149,10 @@ export default function Home() {
 </footer>
 
 {/* <!-- Jquery Script v --> */}
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+{/* <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> */}
 {/* <!-- bootstrp --> */}
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
-<script src="assets/js/owl.carousel.min.js"></script>
+{/* <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script> */}
+{/* <script src="assets/js/owl.carousel.min.js"></script> */}
 {/* <!-- custom js --> */}
 {/* <!-- <script src="assets/js/app.js"></script> --> */}
 {/* <script>

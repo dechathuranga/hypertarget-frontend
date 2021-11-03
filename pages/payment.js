@@ -172,7 +172,7 @@ const CheckoutForm = ({ paymentIntent }) => {
   <div>
     <Head>
       <meta charset="UTF-8" />
-      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      {/* <meta http-equiv="X-UA-Compatible" content="IE=edge" /> */}
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <title>Hypertarget</title>
       {/* <!-- favicon --> */}
@@ -379,10 +379,10 @@ const CheckoutForm = ({ paymentIntent }) => {
       </footer>
 
       {/* <!-- Jquery Script v --> */}
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      {/* <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> */}
       {/* <!-- bootstrp --> */}
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
-      <script src="assets/js/owl.carousel.min.js"></script>
+      {/* <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script> */}
+      {/* <script src="assets/js/owl.carousel.min.js"></script> */}
 
     </body>
 

@@ -63,7 +63,7 @@ export default function Home() {
     <div>
       <Head>
         <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        {/* <meta http-equiv="X-UA-Compatible" content="IE=edge" /> */}
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Hypertarget</title>
         {/* <!-- favicon --> */}
@@ -228,7 +228,7 @@ export default function Home() {
                               Custom
                                         </p>
                             <button className="bordered">
-                              get in touch   <i style={{ marginLeft : "10px", }} class="fas fa-arrow-right"></i>
+                              get in touch   <i style={{ marginLeft : "10px", }} className="fas fa-arrow-right"></i>
                                             {/* <svg width="22" height="15" viewBox="0 0 22 15" fill="none" xmlns="http://www.w3.org/2000/svg"> */}
                                 {/* <path d="M13.8913 1L20.5 7.5M13.8913 14L20.5 7.5M20.5 7.5H1.5" stroke="#192B43" strokeWidth="1.4" stroke-linecap="round" stroke-linejoin="round" /> */}
                               {/* </svg> */}
@@ -250,7 +250,7 @@ export default function Home() {
                             </ul>
                             <div className="d-flex justify-content-center">
                               <button className="bordered style-2">
-                                get in touch   <i style={{ marginLeft : "10px", }} class="fas fa-arrow-right"></i>
+                                get in touch   <i style={{ marginLeft : "10px", }} className="fas fa-arrow-right"></i>
                                             {/* <svg width="22" height="15" viewBox="0 0 22 15" fill="none" xmlns="http://www.w3.org/2000/svg"> */}
                                   {/* <path d="M13.8913 1L20.5 7.5M13.8913 14L20.5 7.5M20.5 7.5H1.5" stroke="#192B43" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" /> */}
                                 {/* </svg> */}
@@ -325,10 +325,10 @@ export default function Home() {
         </footer>
 
         {/* <!-- Jquery Script v --> */}
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        {/* <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> */}
         {/* <!-- bootstrp --> */}
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
-        <script src="assets/js/owl.carousel.min.js"></script>
+        {/* <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script> */}
+        {/* <script src="assets/js/owl.carousel.min.js"></script> */}
         {/* <!-- custom js --> */}
         {/* <!-- <script src="assets/js/app.js"></script> --> */}
         {/* <script>

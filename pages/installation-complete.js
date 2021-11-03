@@ -16,7 +16,7 @@ export default function Home() {
         <div>
             <Head>
                 <meta charset="UTF-8" />
-                <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+                {/* <meta http-equiv="X-UA-Compatible" content="IE=edge" /> */}
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
                 <title>Hypertarget</title>
                 {/* <!-- favicon --> */}
@@ -111,7 +111,7 @@ export default function Home() {
                             <div className="modal-body text-center">
                                  <Image style={{marginLeft: 'auto', marginRight: 'auto' }} src="assets/images/check-big.svg" alt="" />
                                 <h4 className="head">Installation Complete!</h4>
-                                <button className="btn-blue" onclick="location.href='addjourney.html';">
+                                <button className="btn-blue" onClick="location.href='addjourney.html';">
                                     Create Your first journey
                     </button>
                             </div>
@@ -120,13 +120,13 @@ export default function Home() {
                 </div>
 
                 {/* <!-- Jquery Script v --> */}
-                <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+                {/* <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> */}
                 {/* <!-- jquery step js --> */}
-                <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-steps/1.1.0/jquery.steps.js"></script>
+                {/* <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-steps/1.1.0/jquery.steps.js"></script> */}
                 {/* <!-- jquery validate --> */}
-                <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.15.0/jquery.validate.js"></script>
+                {/* <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.15.0/jquery.validate.js"></script> */}
                 {/* <!-- bootstrp --> */}
-                <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
+                {/* <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script> */}
                 {/* <!-- custom js --> */}
                 <script src="assets/js/app.js"></script>
                 {/* <script>
