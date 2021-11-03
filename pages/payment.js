@@ -273,19 +273,19 @@ const CheckoutForm = ({ paymentIntent }) => {
                     </h3>
                 {/* <form action=""> */}
                 <div className="form-group">
-                  <label for="">Name *</label>
+                  <label htmlFor="">Name *</label>
                   <div className="c_input-group">
                     <input onKeyUp={(e) => onKeyUpName(e)} type="text" name="" placeholder="Enter your full name" id="" />
                   </div>
                 </div>
                 <div className="form-group">
-                  <label for="">Email *</label>
+                  <label htmlFor="">Email *</label>
                   <div className="c_input-group">
                     <input onKeyUp={(e) => onKeyUpEmail(e)} type="text" name="" placeholder="Enter your email address" id="" />
                   </div>
                 </div>
                 <div className="form-group">
-                  <label for="">Card Details *</label>
+                  <label htmlFor="">Card Details *</label>
                   <Elements stripe={stripePromise}>
                     <CheckoutForm paymentIntent={paymentIntent} />
                   </Elements>
