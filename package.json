@@ -9,7 +9,6 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@babel/core": "^7.16.0",
     "@chakra-ui/react": "^1.1.5",
     "@emotion/react": "^11.1.4",
     "@emotion/styled": "^11.0.0",
@@ -37,7 +36,6 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "reactstrap": "^8.9.0",
-    "sqlite3": "^5.0.0",
     "stripe": "^8.174.0"
   },
   "devDependencies": {
