@@ -196,9 +196,9 @@ const CheckoutForm = ({ paymentIntent }) => {
       <nav className="main-nav landing-nav">
         <div className="nav-wrapper">
           <div className="d-flex">
-             <Image src="assets/images/menu-bar.svg" className="menu-bar" alt="" />
+             <Image src="/assets/images/menu-bar.svg" width={10} height={10} className="menu-bar" alt="" />
             <div className="logo-wrapper">
-               <Image src="assets/images/logo.svg" alt="" />
+               <Image src="/assets/images/logo.svg" width={200} height={100} alt="" />
             </div>
           </div>
           <ul className="nav-list">
@@ -216,10 +216,10 @@ const CheckoutForm = ({ paymentIntent }) => {
         <div className="mobile-nav">
           <div className="menu-header">
             <div className="logo-wrapper">
-               <Image src="assets/images/logo.svg" alt="" />
+               <Image src="/assets/images/logo.svg" width={10} height={10} alt="" />
             </div>
             <div className="close">
-               <Image src="assets/images/menu-close.svg" alt="" />
+               <Image src="/assets/images/menu-close.svg" width={10} height={10} alt="" />
 
             </div>
           </div>
@@ -244,7 +244,7 @@ const CheckoutForm = ({ paymentIntent }) => {
                         </a>
                 </li>
                 <li>
-                   <Image src="assets/images/bread-arrow.svg" alt="" />
+                   <Image src="/assets/images/bread-arrow.svg" width={10} height={10} alt="" />
                 </li>
                 <li className="active"><a href="">
                   Checkout
@@ -326,7 +326,7 @@ const CheckoutForm = ({ paymentIntent }) => {
         <div className="container">
           <div className="row justify-content-center">
             <div className="col-lg-4 col-md-4 col-sm-12 col-12">
-               <Image className="ft-logo" src="assets/images/logo.svg" alt="" />
+               <Image className="ft-logo" src="/assets/images/logo.svg" width={400} height={400} alt="" />
               <p className="para mt-20">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
                 </p>
@@ -382,7 +382,7 @@ const CheckoutForm = ({ paymentIntent }) => {
       {/* <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> */}
       {/* <!-- bootstrp --> */}
       {/* <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script> */}
-      {/* <script src="assets/js/owl.carousel.min.js"></script> */}
+      {/* <script src="/assets/js/owl.carousel.min.js"></script> */}
 
     </body>
 

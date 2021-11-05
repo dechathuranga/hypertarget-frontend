@@ -21,21 +21,21 @@ export default function Home() {
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
         {/* <!-- owl carousel --> */}
-        <link rel="stylesheet" href="assets/css/owl.carousel.min.css" />
-        <link rel="stylesheet" href="assets/css/owl.theme.default.min.css" />
+        <link rel="stylesheet" href="/assets/css/owl.carousel.min.css" />
+        <link rel="stylesheet" href="/assets/css/owl.theme.default.min.css" />
         {/* <!-- custom css --> */}
-        <link rel="stylesheet" href="assets/css/steps.css" />
-        <link rel="stylesheet" href="assets/css/main.css" />
-        <link rel="stylesheet" href="assets/css/responsive.css" />
-        <link rel="stylesheet" href="assets/css/code.css" />
+        <link rel="stylesheet" href="/assets/css/steps.css" />
+        <link rel="stylesheet" href="/assets/css/main.css" />
+        <link rel="stylesheet" href="/assets/css/responsive.css" />
+        <link rel="stylesheet" href="/assets/css/code.css" />
       </Head>
 
       <nav className="main-nav landing-nav">
         <div className="nav-wrapper">
           <div className="d-flex">
-            {/* <Image src="assets/images/menu-bar.svg" className="menu-bar" alt="" /> */}
+            <Image src="/assets/images/menu-bar.svg" width={10} height={10} className="menu-bar" alt="" />
             <div className="logo-wrapper">
-              {/* <Image src="assets/images/logo.svg" alt="" /> */}
+              <Image src="/assets/images/logo.svg" width={200} height={100} alt="" />
             </div>
           </div>
           <ul className="nav-list">
@@ -56,10 +56,10 @@ export default function Home() {
         <div className="mobile-nav">
           <div className="menu-header">
             <div className="logo-wrapper">
-              {/* <Image src="assets/images/logo.svg" alt="" /> */}
+              <Image src="/assets/images/logo.svg" width={200} height={100} alt="" />
             </div>
             <div className="close">
-              {/* <Image src="assets/images/menu-close.svg" alt="" /> */}
+              <Image src="/assets/images/menu-close.svg" width={200} height={100} alt="" />
             </div>
           </div>
           <ul className="nav-list">
@@ -93,7 +93,7 @@ export default function Home() {
             {/* col-2 */}
             <div className="col-lg-6 col-md-6 col-sm-12 col-12">
               <div className="banner-img-wrapper">
-                {/* <Image src="assets/images/banner-img.svg" alt="banner img" className="img-fluid" /> */}
+                <Image src="/assets/images/banner-img.svg" width={400} height={400} alt="banner img" className="img-fluid" />
               </div>
             </div>
           </div>
@@ -103,19 +103,19 @@ export default function Home() {
         <div className="container">
           <div className="logos-wrapper">
             <div className="logos">
-              {/* <Image src="assets/images/logos/Mask Group.png" alt="" /> */}
+              <Image src="/assets/images/logos/Mask Group.png" width={400} height={400} alt="" />
             </div>
             <div className="logos">
-              {/* <Image src="assets/images/logos/Mask Group-1.png" alt="" /> */}
+              <Image src="/assets/images/logos/Mask Group-1.png" width={400} height={400} alt="" />
             </div>
             <div className="logos">
-              {/* <Image src="assets/images/logos/Mask Group-2.png" alt="" /> */}
+              <Image src="/assets/images/logos/Mask Group-2.png" width={400} height={400} alt="" />
             </div>
             <div className="logos">
-              {/* <Image src="assets/images/logos/Mask Group-3.png" alt="" /> */}
+              <Image src="/assets/images/logos/Mask Group-3.png" width={400} height={400} alt="" />
             </div>
             <div className="logos">
-              {/* <Image src="assets/images/logos/Mask Group-4.png" alt="" /> */}
+              <Image src="/assets/images/logos/Mask Group-4.png" width={400} height={400} alt="" />
             </div>
           </div>
         </div>
@@ -125,7 +125,7 @@ export default function Home() {
         <div className="container">
           <div className="row align-items-center">
             <div className="col-lg-6 col-md-6 col-sm-12 col-12">
-              {/* <Image src="assets/images/banner-bottom.svg" className="img-fluid" alt="" /> */}
+              <Image src="/assets/images/banner-bottom.svg" width={400} height={400} className="img-fluid" alt="" />
             </div>
             <div className="col-lg-6 col-md-6 col-sm-12 col-12">
               <h3 className="heading-2 with-design">
@@ -173,7 +173,7 @@ export default function Home() {
           </div>
           <div className="row align-items-center mt-60 mb-60">
             <div className="col-lg-6 col-md-6 col-sm-12 col-12 text-center">
-              {/* <Image className="img0" src="assets/images/img01.png" alt="" /> */}
+              <Image className="img0" src="/assets/images/img01.png" width={400} height={400} alt="" />
             </div>
             <div className="col-lg-6 col-md-6 col-sm-12 col-12">
               <h4 className="heading-3">
@@ -198,12 +198,12 @@ export default function Home() {
               </p>
             </div>
             <div className="col-lg-6 col-md-6 col-sm-12 col-12 text-center">
-              {/* <Image className="img0" src="assets/images/img02.png" alt="" /> */}
+              <Image className="img0" src="/assets/images/img02.png" width={400} height={400} alt="" />
             </div>
           </div>
           <div className="row align-items-center mt-60 mb-60">
             <div className="col-lg-6 col-md-6 col-sm-12 col-12 text-center">
-              {/* <Image className="img0" src="assets/images/img03.png" alt="" /> */}
+              <Image className="img0" src="/assets/images/img03.png" width={400} height={400} alt="" />
             </div>
             <div className="col-lg-6 col-md-6 col-sm-12 col-12">
               <h4 className="heading-3">
@@ -228,12 +228,12 @@ export default function Home() {
               </p>
             </div>
             <div className="col-lg-6 col-md-6 col-sm-12 col-12 text-center">
-              {/* <Image className="img0" src="assets/images/img04.png" alt="" /> */}
+              <Image className="img0" src="/assets/images/img04.png" width={400} height={400} alt="" />
             </div>
           </div>
           <div className="row align-items-center mt-60 mb-60">
             <div className="col-lg-6 col-md-6 col-sm-12 col-12 text-center">
-              {/* <Image className="img0" src="assets/images/img05.png" alt="" /> */}
+              <Image className="img0" src="/assets/images/img05.png" width={400} height={400} alt="" />
             </div>
             <div className="col-lg-6 col-md-6 col-sm-12 col-12">
               <h4 className="heading-3">
@@ -263,7 +263,7 @@ export default function Home() {
                 <div className="item">
                   <div className="check-card-wrap">
                     <div className="check">
-                      {/* <Image src="assets/images/check.svg" alt="" /> */}
+                      <Image src="/assets/images/check.svg" width={400} height={400} alt="" />
                     </div>
                     <div className="check-details">
                       <p className="para">
@@ -279,7 +279,7 @@ export default function Home() {
                 <div className="item">
                   <div className="check-card-wrap">
                     <div className="check">
-                      {/* <Image src="assets/images/check.svg" alt="" /> */}
+                      <Image src="/assets/images/check.svg" alt="" width={400} height={400} />
                     </div>
                     <div className="check-details">
                       <p className="para">
@@ -295,7 +295,7 @@ export default function Home() {
                 <div className="item">
                   <div className="check-card-wrap">
                     <div className="check">
-                      {/* <Image src="assets/images/check.svg" alt="" /> */}
+                      <Image src="/assets/images/check.svg" width={400} height={400} alt="" />
                     </div>
                     <div className="check-details">
                       <p className="para">
@@ -311,7 +311,7 @@ export default function Home() {
                 <div className="item">
                   <div className="check-card-wrap">
                     <div className="check">
-                      {/* <Image src="assets/images/check.svg" alt="" /> */}
+                      <Image src="/assets/images/check.svg" alt="" width={400} height={400} />
                     </div>
                     <div className="check-details">
                       <p className="para">
@@ -327,7 +327,7 @@ export default function Home() {
                 <div className="item">
                   <div className="check-card-wrap">
                     <div className="check">
-                      {/* <Image src="assets/images/check.svg" alt="" /> */}
+                      <Image src="/assets/images/check.svg" width={400} height={400} alt="" />
                     </div>
                     <div className="check-details">
                       <p className="para">
@@ -343,7 +343,7 @@ export default function Home() {
                 <div className="item">
                   <div className="check-card-wrap">
                     <div className="check">
-                      {/* <Image src="assets/images/check.svg" alt="" /> */}
+                      <Image src="/assets/images/check.svg" width={400} height={400} alt="" />
                     </div>
                     <div className="check-details">
                       <p className="para">
@@ -359,7 +359,7 @@ export default function Home() {
                 <div className="item">
                   <div className="check-card-wrap">
                     <div className="check">
-                      {/* <Image src="assets/images/check.svg" alt="" /> */}
+                      <Image src="/assets/images/check.svg" width={400} height={400} alt="" />
                     </div>
                     <div className="check-details">
                       <p className="para">
@@ -413,7 +413,7 @@ export default function Home() {
         <div className="container">
           <div className="row justify-content-center">
             <div className="col-lg-4 col-md-4 col-sm-12 col-12">
-              {/* <Image className="ft-logo" src="assets/images/logo.svg" alt="" /> */}
+              <Image className="ft-logo" width={400} height={400} src="/assets/images/logo.svg" alt="" />
               <p className="para mt-20">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
               </p>
