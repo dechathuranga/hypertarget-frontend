@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@babel/core": "^7.16.0",
     "@chakra-ui/react": "^1.1.5",
     "@emotion/react": "^11.1.4",
     "@emotion/styled": "^11.0.0",
@@ -30,6 +31,7 @@
     "next-auth": "^3.27.3",
     "next-images": "^1.8.2",
     "next-iron-session": "^4.2.0",
+    "node-pre-gyp": "^0.17.0",
     "nodemailer": "^6.6.3",
     "nookies": "^2.5.2",
     "react": "^17.0.2",
