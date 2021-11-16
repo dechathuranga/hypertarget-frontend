@@ -31,7 +31,7 @@
     "next-auth": "^3.29.0",
     "next-images": "^1.8.2",
     "next-iron-session": "^4.2.0",
-    "node-pre-gyp": "^0.17.0",
+    "node-pre-gyp": "^2.2.2",
     "nodemailer": "^6.6.3",
     "nookies": "^2.5.2",
     "react": "^17.0.2",
