@@ -46,7 +46,7 @@ const options = {
         `${process.env.APP_URL || "http://localhost:3000"}/how-do-you-want-to-add-the-script`
       );
     },
-    // jwt: async (token, user, account, profile, isNewUser) => { return Promise.resolve(token) },
+    jwt: async (token, user, account, profile, isNewUser) => { return Promise.resolve(token) },
     session: async (session, user) => {
       session.user = user;
       //console.log("Session Session: " + JSON.stringify(session, null, 4));

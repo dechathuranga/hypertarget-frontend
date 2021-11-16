@@ -119,7 +119,9 @@ const CheckoutForm = ({ paymentIntent }) => {
         key : hash,
       }
 
-      // alert(window.$name + " - " + window.$email)
+        window.$email = window.$email;
+      
+      alert(window.$name + " - " + window.$email)
 
       fetch('/api/add-user', {
       method: 'POST',

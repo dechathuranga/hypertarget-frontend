@@ -47,20 +47,20 @@ export default function Home() {
         <nav className="main-nav">
           <div className="nav-wrapper">
             <div className="logo-wrapper">
-               <Image src="assets/images/logo.svg" alt="" />
+               <Image src="/assets/images/logo.svg" width={10} height={10} alt="" />
             </div>
             <div className="right-side">
               <div className="search-bar-wrapper">
-                 <Image src="assets/images/search-icon.png" alt="" />
+                 <Image src="/assets/images/search-icon.png" width={10} height={10} alt="" />
                 <input type="text" placeholder="Search" name id />
               </div>
               <span className="notifi">
-                 <Image src="assets/images/notifi.png" alt="" />
+                 <Image src="/assets/images/notifi.png" width={10} height={10} alt="" />
               </span>
               <a >
                 <div className="profile-wrap">
                   <div className="profile-img">
-                     <Image src="assets/images/profile.jpg" alt="" />
+                     <Image src="/assets/images/profile.jpg" width={10} height={10} alt="" />
                   </div>
                   <div className="profile-det">
                     <h5 className="name">
@@ -94,7 +94,7 @@ export default function Home() {
                         <a onClick={(e) => handleSubmit(e, session.user.email)} >
                           <div className="block animate__animated animate__fadeInUp">
                             <div className="icon">
-                               <Image src="assets/images/icon1.svg" alt="" />
+                               <Image src="/assets/images/icon1.svg" width={10} height={10} alt="" />
                             </div>
                             <p>
                               I’m Ready to Add The
@@ -103,7 +103,7 @@ export default function Home() {
                           </div></a>
                         <div className="block animate__animated animate__fadeInUp">
                           <div className="icon">
-                             <Image src="assets/images/icon2.svg" alt="" />
+                             <Image src="/assets/images/icon2.svg" width={10} height={10} alt="" />
                           </div>
                           <p>
                             Send Installation
