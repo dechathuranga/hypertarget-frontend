@@ -45,20 +45,20 @@ export default function Home() {
                     <nav className="main-nav">
                         <div className="nav-wrapper">
                             <div className="logo-wrapper">
-                                 <Image src="assets/images/logo.svg" alt="" />
+                                 <Image src="/assets/images/logo.svg" width={10} height={10} alt="" />
                             </div>
                             <div className="right-side">
                                 <div className="search-bar-wrapper">
-                                     <Image src="assets/images/search-icon.png" alt="" />
+                                     <Image src="/assets/images/search-icon.png" width={10} height={10} alt="" />
                                     <input type="text" placeholder="Search" name="" id="" />
                                 </div>
                                 <span className="notifi">
-                                     <Image src="assets/images/notifi.png" alt="" />
+                                     <Image width={10} height={10} src="/assets/images/notifi.png" alt="" />
                                 </span>
                                 <a href="">
                                     <div className="profile-wrap">
                                         <div className="profile-img">
-                                             <Image src="assets/images/profile.jpg" alt="" />
+                                             <Image width={10} height={10} src="/assets/images/profile.jpg" alt="" />
                                         </div>
                                         <div className="profile-det">
                                             <h5 className="name">
@@ -85,13 +85,13 @@ export default function Home() {
                         </div>
                         <div className="row justify-content-center">
                             <div className="col-12 mt-100">
-                                 <Image src="assets/images/stack.png" className="img-fluid stack" alt="" />
+                                 <Image width={10} height={10} src="/assets/images/stack.png" className="img-fluid stack" alt="" />
                                 <h2 className="main-title text-center pd-30">
                                     User Journey Dashboard
                     </h2>
                                 <div className="text-center mt-5">
                                     <button className="btn bordered filter-btn" data-bs-toggle="modal" data-bs-target="#addFilter">
-                                         <Image src="assets/images/filter-icon.svg" alt="" />
+                                         <Image width={10} height={10} src="/assets/images/filter-icon.svg" alt="" />
                                         add filter
                                 </button>
                                     <a ref={buttonRef} data-bs-toggle="modal" data-bs-target="#completeAlert" className="cta"><i
@@ -109,7 +109,7 @@ export default function Home() {
                     <div className="modal-dialog">
                         <div className="modal-content">
                             <div className="modal-body text-center">
-                                 <Image style={{marginLeft: 'auto', marginRight: 'auto' }} src="assets/images/check-big.svg" alt="" />
+                                 <Image style={{marginLeft: 'auto', marginRight: 'auto' }} width={10} height={10} src="/assets/images/check-big.svg" alt="" />
                                 <h4 className="head">Installation Complete!</h4>
                                 <button className="btn-blue" onClick="location.href='addjourney.html';">
                                     Create Your first journey
@@ -128,7 +128,7 @@ export default function Home() {
                 {/* <!-- bootstrp --> */}
                 {/* <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script> */}
                 {/* <!-- custom js --> */}
-                {/* <script src="assets/js/app.js"></script> */}
+                {/* <script width={10} height={10} src="/assets/js/app.js"></script> */}
                 {/* <script>
     $(document).ready(function(){
         $("#completeAlert").modal('show');

@@ -33,30 +33,30 @@ export default function Home() {
                     // document.getElementById("layer2Name").innerHTML = response[0].stepName;
 
                     ///////////////////////////////////////////
-                    if(response[0].event == 0){
-                    fetch('/api/visitor-count-by-click', {
-                        method: 'POST',
-                        headers: {
-                            'Accept': 'application/json, text/plain, */*',
-                            'Content-Type': 'application/json'
-                        },
-                        body: JSON.stringify(response[0].innerText)
-                    })
-                        .then(response => response.json())
-                        .then(response => {
-                            console.log("** - ", response)
-                            setCount: response.length;
-                            // alert(response.length);
-                            // alert(count);
-                            window.$counts = response.length;
-                            if (0 < response.length) {
-                                // document.getElementById("userJourneyName").innerHTML = response[0].journeyName;
-                                // document.getElementById("layer1Name").innerHTML = response[0].stepName;
-                                document.getElementById("layer1Count").innerHTML = response.length/2;
-                                // document.getElementById("layer2Name").innerHTML = response[0].stepName;
-                            }
-                        });
-                    }else{
+                    if (response[0].event == 0) {
+                        fetch('/api/visitor-count-by-click', {
+                            method: 'POST',
+                            headers: {
+                                'Accept': 'application/json, text/plain, */*',
+                                'Content-Type': 'application/json'
+                            },
+                            body: JSON.stringify(response[0].innerText)
+                        })
+                            .then(response => response.json())
+                            .then(response => {
+                                console.log("** - ", response)
+                                setCount: response.length;
+                                // alert(response.length);
+                                // alert(count);
+                                window.$counts = response.length;
+                                if (0 < response.length) {
+                                    // document.getElementById("userJourneyName").innerHTML = response[0].journeyName;
+                                    // document.getElementById("layer1Name").innerHTML = response[0].stepName;
+                                    document.getElementById("layer1Count").innerHTML = response.length / 2;
+                                    // document.getElementById("layer2Name").innerHTML = response[0].stepName;
+                                }
+                            });
+                    } else {
                         fetch('/api/visitor-count', {
                             method: 'POST',
                             headers: {
@@ -75,7 +75,7 @@ export default function Home() {
                                 if (0 < response.length) {
                                     // document.getElementById("userJourneyName").innerHTML = response[0].journeyName;
                                     // document.getElementById("layer1Name").innerHTML = response[0].stepName;
-                                    document.getElementById("layer1Count").innerHTML = response.length/2;
+                                    document.getElementById("layer1Count").innerHTML = response.length / 2;
                                     // document.getElementById("layer2Name").innerHTML = response[0].stepName;
                                 }
                             });
@@ -334,21 +334,21 @@ export default function Home() {
                     <nav className="main-nav">
                         <div className="nav-wrapper">
                             <div className="logo-wrapper">
-                                 <Image src="assets/images/logo.svg" alt="" />
+                                <Image width={10} height={10} src="/assets/images/logo.svg" alt="" />
                                 {/* <p>You  {count} </p> */}
                             </div>
                             <div className="right-side">
                                 <div className="search-bar-wrapper">
-                                     <Image src="assets/images/search-icon.png" alt="" />
+                                    <Image width={10} height={10} src="/assets/images/search-icon.png" alt="" />
                                     <input type="text" placeholder="Search" name="" id="" />
                                 </div>
                                 <span className="notifi">
-                                     <Image src="assets/images/notifi.png" alt="" />
+                                    <Image width={10} height={10} src="/assets/images/notifi.png" alt="" />
                                 </span>
                                 <a href="account-page.html">
                                     <div className="profile-wrap">
                                         <div className="profile-img">
-                                             <Image src="assets/images/profile.jpg" alt="" />
+                                            <Image width={10} height={10} src="/assets/images/profile.jpg" alt="" />
                                         </div>
                                         <div className="profile-det">
                                             <h5 className="name">
@@ -376,7 +376,7 @@ export default function Home() {
                         </div>
                         <div className="row justify-content-center">
                             <div className="col-12 mt-100">
-                                 <Image src="assets/images/stack.png" className="img-fluid stack" alt="" />
+                                 <Image width={10} height={10} src="/assets/images/stack.png" className="img-fluid stack" alt="" />
                                 <h2 className="main-title text-center pd-30">
                                     User Journey Dashboard
                     </h2>
@@ -412,17 +412,22 @@ export default function Home() {
                                     <div className="card-body" style={{ padding: '45px 0px' }}>
                                         <div className="row align-items-center">
                                             <div className="col-lg-6 col-md-6 col-12 col-sm-12 text-center">
-                                                 <Image src="assets/images/layer1only.png" style={{ width: '100%', maxWidth: '250px' }} className="img-fluid" alt="" />
+                                                <Image width={150} height={70} src="/assets/images/layer1only.png" className="img-fluid" alt="" />
                                                 <div className="input-group">
                                                     {/* <h3 > Count</h3> */}
                                                     <h3 id="layer1Count" style={{ marginLeft: '45px' }} className="title-1"> (innerHTML)</h3>
                                                     <h3 id="layer1Name" style={{ marginLeft: '45px' }} className="title-1"> (innerHTML)</h3>
                                                 </div>
-
-                                                 <Image src="assets/images/layer2only.png" style={{ width: '100%', maxWidth: '250px' }} className="img-fluid" alt="" />
+                                                <div className=" text-center">
+                                                    <iframe src="http://localhost:3000/" name="iframe_a" height="300px" width="100%" title="Iframe Example" style={{ padding: '20px 20px' }} ></iframe>
+                                                </div>
+                                                <Image width={150} height={70} src="/assets/images/layer2only.png" style={{ width: '100%', maxWidth: '250px' }} className="img-fluid" alt="" />
                                                 <div className="input-group">
                                                     <h3 > 0</h3>
                                                     <h3 id="layer2Name" style={{ marginLeft: '45px' }} className="title-1"> (innerHTML)</h3>
+                                                </div>
+                                                <div className=" text-center">
+                                                    <iframe src="http://localhost:3000/pricing" name="iframe_a" height="300px" width="100%" title="Iframe Example" style={{ padding: '20px 20px' }} ></iframe>
                                                 </div>
                                             </div>
                                             <div className="col-lg-6 col-md-6 col-12 col-sm-12">
@@ -498,7 +503,7 @@ export default function Home() {
                                         </div>
                                         <div className="col-12 mt-2">
                                             <button className="btn bordered filter-btn" data-bs-toggle="modal" data-bs-target="#addFilter">
-                                                 <Image src="assets/images/filter-icon.svg" alt="" />
+                                                <Image width={10} height={10} src="/assets/images/filter-icon.svg" alt="" />
                                                 add filter
                                 </button>
                                         </div>
@@ -511,7 +516,7 @@ export default function Home() {
                                                 <div className="add-journey">
 
                                                     <div className="journey-img">
-                                                         <Image src="assets/images/layer1.png" alt="" />
+                                                        <Image width={50} height={50} src="/assets/images/layer1.png" alt="" />
                                                     </div>
                                                     <div className="add-inputs">
                                                         <div className="form-group">
@@ -535,7 +540,7 @@ export default function Home() {
 
 
                                                                 </select>
-                                                                 <Image src="assets/images/select-drop.svg" alt="" />
+                                                                <Image width={10} height={10} src="/assets/images/select-drop.svg" alt="" />
                                                             </div>
                                                         </div>
                                                         <div className="add-btn">
@@ -548,10 +553,10 @@ export default function Home() {
                                                                     // onClick={(e) => handleSaveJourney()}
                                                                     name="" id="" value={global.$event}
                                                                 >
-                                                                    {options.map((option) => ( <option key={option.value} value={option.value}>{option.label}</option> ))}
+                                                                    {options.map((option) => (<option key={option.value} value={option.value}>{option.label}</option>))}
 
                                                                 </select>
-                                                                 <Image src="assets/images/select-drop.svg" alt="" />
+                                                                <Image width={50} height={50} src="/assets/images/select-drop.svg" alt="" />
                                                             </div>
                                                         </div>
                                                         <div className="form-group">
@@ -565,7 +570,7 @@ export default function Home() {
                                                 <div className="add-journey">
 
                                                     <div className="journey-img">
-                                                         <Image src="assets/images/layer1.png" alt="" />
+                                                        <Image width={50} height={50} src="/assets/images/layer1.png" alt="" />
                                                     </div>
                                                     <div className="add-inputs">
                                                         <div className="form-group">
@@ -589,7 +594,7 @@ export default function Home() {
 
 
                                                                 </select>
-                                                                 <Image src="assets/images/select-drop.svg" alt="" />
+                                                                <Image width={10} height={10} src="/assets/images/select-drop.svg" alt="" />
                                                             </div>
                                                         </div>
                                                         <div className="add-btn">
@@ -607,7 +612,7 @@ export default function Home() {
                                                                     ))}
 
                                                                 </select>
-                                                                 <Image src="assets/images/select-drop.svg" alt="" />
+                                                                <Image width={10} height={10} src="/assets/images/select-drop.svg" alt="" />
                                                             </div>
                                                         </div>
                                                         <div className="form-group">
@@ -660,7 +665,7 @@ export default function Home() {
                                                     <select name="" id="">
                                                         <option value="">Add UTM Filter</option>
                                                     </select>
-                                                     <Image src="assets/images/select-down.svg" alt="" />
+                                                    <Image width={10} height={10} src="/assets/images/select-down.svg" alt="" />
                                                 </div>
                                             </div>
                                         </div>
@@ -701,7 +706,7 @@ export default function Home() {
                     <div className="modal-dialog">
                         <div className="modal-content">
                             <div className="modal-body text-center">
-                                 <Image src="assets/images/check-big.svg" alt="" />
+                                <Image width={100} height={100} src="/assets/images/check-big.svg" alt="" />
                                 <h4 className="head">Installation Complete!</h4>
                                 <button className="btn-blue">
                                     Create Your first journey
@@ -720,7 +725,7 @@ export default function Home() {
                 {/* <!-- bootstrp --> */}
                 {/* <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script> */}
                 {/* <!-- custom js --> */}
-                {/* <script src="assets/js/app.js"></script> */}
+                {/* <script width={10} height={10} src="/assets/js/app.js"></script> */}
 
             </body>
 

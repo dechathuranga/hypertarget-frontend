@@ -32,20 +32,20 @@ export default function Home() {
                     <nav className="main-nav">
                         <div className="nav-wrapper">
                             <div className="logo-wrapper">
-                                <Image src="assets/images/logo.svg" alt="" />
+                                <Image width={10} height={10} src="/assets/images/logo.svg" alt="" />
                             </div>
                             <div className="right-side">
                                 <div className="search-bar-wrapper">
-                                    <Image src="assets/images/search-icon.png" alt="" />
+                                    <Image width={10} height={10} src="/assets/images/search-icon.png" alt="" />
                                     <input type="text" placeholder="Search" name="" id="" />
                                 </div>
                                 <span className="notifi">
-                                    <Image src="assets/images/notifi.png" alt="" />
+                                    <Image width={10} height={10} src="/assets/images/notifi.png" alt="" />
                                 </span>
                                 <a href="">
                                     <div className="profile-wrap">
                                         <div className="profile-img">
-                                            <Image src="assets/images/profile.jpg" alt="" />
+                                            <Image width={10} height={10} src="/assets/images/profile.jpg" alt="" />
                                         </div>
                                         <div className="profile-det">
                                             <h5 className="name">
@@ -82,7 +82,7 @@ export default function Home() {
                                     <div className="card-body" style={{ padding: "45px 0px" }}>
                                         <div className="row align-items-center">
                                             <div className="col-lg-6 col-md-6 col-12 col-sm-12 text-center">
-                                                <Image src="assets/images/layer.png" style={{ width: "100%", maxWidth: "250px" }} className="img-fluid" alt="" />
+                                                <Image width={10} height={10} src="/assets/images/layer.png" style={{ width: "100%", maxWidth: "250px" }} className="img-fluid" alt="" />
                                             </div>
                                             <div className="col-lg-6 col-md-6 col-12 col-sm-12">
                                                 <form action="" className="user-journey-form-1">
@@ -133,7 +133,7 @@ export default function Home() {
                 {/* <!-- bootstrp --> */}
                 {/* <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script> */}
                 {/* <!-- custom js --> */}
-                {/* <script src="assets/js/app.js"></script> */}
+                {/* <script width={10} height={10} src="/assets/js/app.js"></script> */}
             </body>
         </div>
     )
