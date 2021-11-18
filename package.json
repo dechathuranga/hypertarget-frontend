@@ -39,6 +39,8 @@
     "sqlite3": "^5.0.2",
     "stripe": "^8.174.0",
     "website-scraper": "^4.2.3"
+    "website-scraper": "^4.2.3",
+    "puppeteer": "^11.0.0"
   },
   "devDependencies": {
     "eslint": "7.30.0",
