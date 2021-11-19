@@ -43,7 +43,7 @@ const options = {
       //console.log("URL: " + JSON.stringify(url, null, 4));
       //console.log("Base URL: " + JSON.stringify(baseUrl, null, 4));
       return Promise.resolve(
-        `${process.env.APP_URL || "http://localhost:3000"}/how-do-you-want-to-add-the-script`
+        `${"https://619816a8172e440007f44133--quizzical-sammet-7bef26.netlify.app/" || "http://localhost:3000"}/how-do-you-want-to-add-the-script`
       );
     },
     jwt: async (token, user, account, profile, isNewUser) => { 
