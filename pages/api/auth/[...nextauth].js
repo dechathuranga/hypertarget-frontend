@@ -46,7 +46,15 @@ const options = {
         `${process.env.APP_URL || "http://localhost:3000"}/how-do-you-want-to-add-the-script`
       );
     },
-    jwt: async (token, user, account, profile, isNewUser) => { return Promise.resolve(token) },
+    jwt: async (token, user, account, profile, isNewUser) => { 
+      
+      if (user) {
+        token.user = { _id: user._id, email: user.email, status: user.status, provider: 'credentials' };
+    }
+
+    return token;
+      // return Promise.resolve(token)
+     },
     session: async (session, user) => {
       session.user = user;
       if (user) {
@@ -55,7 +63,7 @@ const options = {
       //console.log("Session Session: " + JSON.stringify(session, null, 4));
       //console.log("Session User: " + JSON.stringify(user, null, 4));
       // return Promise.resolve(session);
-      return token;
+      return session;
     },
   },
   database: {
