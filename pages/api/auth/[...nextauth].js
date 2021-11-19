@@ -49,16 +49,29 @@ const options = {
     jwt: async (token, user, account, profile, isNewUser) => { return Promise.resolve(token) },
     session: async (session, user) => {
       session.user = user;
+      if (user) {
+        token.user = { _id: user._id, email: user.email, status: user.status, provider: 'credentials' };
+    }
       //console.log("Session Session: " + JSON.stringify(session, null, 4));
       //console.log("Session User: " + JSON.stringify(user, null, 4));
-      return Promise.resolve(session);
+      // return Promise.resolve(session);
+      return token;
     },
   },
   database: {
-    type: "sqlite",
-    database: ":memory:",
-    synchronize: true,
-  },
+    type: 'mongodb',
+    url: 'mongodb+srv://admin:admin@cluster0.w9t0r.mongodb.net/hypertarget',
+    ssl: true,
+    // replicaSet: 'Cluster0-shard-0',
+    authSource: 'admin',
+    retryWrites: true,
+    synchronize: true
+},
+  // database: {
+  //   type: "sqlite",
+  //   database: ":memory:",
+  //   synchronize: true,
+  // },
 };
 
 export default (req, res) => NextAuth(req, res, options);
