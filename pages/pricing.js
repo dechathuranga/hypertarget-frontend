@@ -26,6 +26,7 @@ export default function Home() {
     router.push('/payment');
   }
 
+
   const handleClickMonthlyPro = () => {
     if(window.$type == 'M'){
       globalVariableSet("MY","150");
@@ -37,9 +38,13 @@ export default function Home() {
 
 
   const handleClickMonth = () => {
+
+    window.$colour = "nav-link active";
     document.getElementById("basicPrice").innerHTML = " $99/mo";
     document.getElementById("proPrice").innerHTML = " $150/mo";
     window.$type = "M";
+    document.getElementById("profile-tab").className = "nav-link";
+    document.getElementById("home-tab").className = "nav-link active";
 
   }
 
@@ -47,6 +52,8 @@ export default function Home() {
     document.getElementById("basicPrice").innerHTML = " $79/mo";
     document.getElementById("proPrice").innerHTML = " $120/mo";
     window.$type = "Y";
+    document.getElementById("profile-tab").className = "nav-link active";
+    document.getElementById("home-tab").className = "nav-link";
   }
 
   useEffect(() => {
@@ -54,6 +61,8 @@ export default function Home() {
   document.getElementById("basicPrice").innerHTML = " $99/mo";
   document.getElementById("proPrice").innerHTML = " $150/mo";
   window.$type = "M";
+  document.getElementById("profile-tab").className = "nav-link";
+  document.getElementById("home-tab").className = "nav-link active";
   }, []);
 
 
@@ -146,11 +155,11 @@ export default function Home() {
                 {/* <!-- plan page tabs --> */}
                 <ul className="nav nav-tabs price-tabs" id="myTab" role="tablist">
                   <li className="nav-item" role="presentation">
-                    <a onClick={(e) => handleClickMonth()} className="nav-link active" id="home-tab" data-bs-toggle="tab" href="#home" role="tab"
+                    <a onClick={(e) => handleClickMonth()} className="" id="home-tab" data-bs-toggle="tab" href="#home" role="tab"
                       aria-controls="home" aria-selected="true">monthly</a>
                   </li>
                   <li className="nav-item" role="presentation">
-                    <a onClick={(e) => handleClickYear()} className="nav-link" id="profile-tab" data-bs-toggle="tab" href="#profile" role="tab"
+                    <a onClick={(e) => handleClickYear()} className="" id="profile-tab" data-bs-toggle="tab" href="#profile" role="tab"
                       aria-controls="profile" aria-selected="false">yearly</a>
                   </li>
                 </ul>

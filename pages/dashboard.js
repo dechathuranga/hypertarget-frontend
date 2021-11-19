@@ -30,20 +30,20 @@ export default function Home() {
         <nav className="main-nav">
           <div className="nav-wrapper">
             <div className="logo-wrapper">
-               <Image src="assets/images/logo.svg" alt="" />
+               <Image width={110} height={40} src="/assets/images/logo.svg" alt="" />
             </div>
             <div className="right-side">
               <div className="search-bar-wrapper">
-                 <Image src="assets/images/search-icon.png" alt="" />
+                 <Image width={10} height={10} src="/assets/images/search-icon.png" alt="" />
                 <input type="text" placeholder="Search" name id />
               </div>
               <span className="notifi">
-                 <Image src="assets/images/notifi.png" alt="" />
+                 <Image width={10} height={10} src="/assets/images/notifi.png" alt="" />
               </span>
               <a >
                 <div className="profile-wrap">
                   <div className="profile-img">
-                     <Image src="assets/images/profile.jpg" alt="" />
+                     <Image width={10} height={10} src="/assets/images/profile.jpg" alt="" />
                   </div>
                   <div className="profile-det">
                     <h5 className="name">
@@ -66,9 +66,9 @@ export default function Home() {
               </h2>
             </div>
           </div>
-          <div className="row justify-content-center">
-            <div className="col-12 mt-100">
-               <Image src="assets/images/stack.png" className="img-fluid stack" alt="" />
+          <div className="row justify-content-center text-center">
+            <div className="col-12 mt-30">
+            <Image width={250} height={150} src="/assets/images/stack.png" style={{ marginLeft: 'auto', marginRight: 'auto' }} alt="" />
               <h2 className="main-title text-center pd-30">
                 User Journey Dashboard
               </h2>
@@ -112,7 +112,7 @@ export default function Home() {
                   </div>
                   <div className="col-12 mt-2">
                     <button className="btn bordered filter-btn" data-bs-toggle="modal" data-bs-target="#addFilter">
-                       <Image src="assets/images/filter-icon.svg" alt="" />
+                       <Image width={10} height={10} src="/assets/images/filter-icon.svg" alt="" />
                       add filter
                     </button>
                   </div>
@@ -122,7 +122,7 @@ export default function Home() {
                     <div className="add-journey-wrap" id="journeyWrap">
                       <div className="add-journey">
                         <div className="journey-img">
-                           <Image src="assets/images/layer1.png" alt="" />
+                           <Image width={10} height={10} src="/assets/images/layer1.png" alt="" />
                         </div>
                         <div className="add-inputs">
                           <div className="form-group">
@@ -135,7 +135,7 @@ export default function Home() {
                               <select name id>
                                 <option value>Metric</option>
                               </select>
-                               <Image src="assets/images/select-drop.svg" alt="" />
+                               <Image width={10} height={10} src="/assets/images/select-drop.svg" alt="" />
                             </div>
                           </div>
                           <div className="add-btn">
@@ -186,7 +186,7 @@ export default function Home() {
                         <select name id>
                           <option value>Add UTM Filter</option>
                         </select>
-                         <Image src="assets/images/select-down.svg" alt="" />
+                         <Image width={10} height={10} src="/assets/images/select-down.svg" alt="" />
                       </div>
                     </div>
                   </div>
@@ -223,7 +223,7 @@ export default function Home() {
         <div className="modal-dialog">
           <div className="modal-content">
             <div className="modal-body text-center">
-               <Image src="assets/images/check-big.svg" alt="" />
+               <Image width={10} height={10} src="/assets/images/check-big.svg" alt="" />
               <h4 className="head">Installation Complete!</h4>
               <button className="btn-blue">
                 Create Your first journey
