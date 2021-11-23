@@ -30,7 +30,7 @@ export default function SignIn({ providers, csrfToken }) {
               <Input type="text" 
               // type="hidden" 
               id="email"
-               name="email" defaultValue={global.$email}/>
+               name="email" defaultValue="dechathuranga@gmail.com"/>
             
             <Button  
             ref={buttonRef}
