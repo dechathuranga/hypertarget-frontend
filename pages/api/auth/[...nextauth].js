@@ -52,8 +52,8 @@ const options = {
         token.user = { _id: user._id, email: user.email, status: user.status, provider: 'credentials' };
     }
 
-    return token;
-      // return Promise.resolve(token)
+    // return token;
+      return Promise.resolve(token)
      },
     session: async (session, user) => {
       session.user = user;
@@ -62,8 +62,8 @@ const options = {
     }
       console.log("Session Session: " + JSON.stringify(session, null, 4));
       console.log("Session User: " + JSON.stringify(user, null, 4));
-      // return Promise.resolve(session);
-      return session;
+      return Promise.resolve(session);
+      // return session;
     },
   },
   database: {

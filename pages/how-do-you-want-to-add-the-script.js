@@ -37,7 +37,7 @@ export default function Home() {
  <main>
         {!session && (
           <>
-             {/* Not signed in <br /> */}
+             Not signed in <br />
              {/* <button onClick={signIn}>Sign In</button> */}
            </>
         )}
