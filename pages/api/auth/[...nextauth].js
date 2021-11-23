@@ -36,14 +36,14 @@ const options = {
   },
   callbacks: {
     signIn: async (user, account, profile) => {
-      //console.log("Sign In User: " + JSON.stringify(user, null, 4));
+      console.log("Sign In User: " + JSON.stringify(user, null, 4));
       return Promise.resolve(true);
     },
     redirect: async (url, baseUrl) => {
-      //console.log("URL: " + JSON.stringify(url, null, 4));
-      //console.log("Base URL: " + JSON.stringify(baseUrl, null, 4));
+      console.log("URL: " + JSON.stringify(url, null, 4));
+      console.log("Base URL: " + JSON.stringify(baseUrl, null, 4));
       return Promise.resolve(
-        `${"https://619816a8172e440007f44133--quizzical-sammet-7bef26.netlify.app/" || "http://localhost:3000"}/how-do-you-want-to-add-the-script`
+        `${process.env.APP_URL || "http://localhost:3000"}/how-do-you-want-to-add-the-script`
       );
     },
     jwt: async (token, user, account, profile, isNewUser) => { 
@@ -60,8 +60,8 @@ const options = {
       if (user) {
         token.user = { _id: user._id, email: user.email, status: user.status, provider: 'credentials' };
     }
-      //console.log("Session Session: " + JSON.stringify(session, null, 4));
-      //console.log("Session User: " + JSON.stringify(user, null, 4));
+      console.log("Session Session: " + JSON.stringify(session, null, 4));
+      console.log("Session User: " + JSON.stringify(user, null, 4));
       // return Promise.resolve(session);
       return session;
     },
