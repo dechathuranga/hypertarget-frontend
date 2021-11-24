@@ -63,6 +63,7 @@ export default function Home() {
   window.$type = "M";
   document.getElementById("profile-tab").className = "nav-link";
   document.getElementById("home-tab").className = "nav-link active";
+  alert(window.location.protocol + "//" +window.location.host);
   }, []);
 
 
