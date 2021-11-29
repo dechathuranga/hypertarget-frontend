@@ -17,7 +17,7 @@ const options = {
         port: '465',
         auth: {
           user: 'hypertargetmail@gmail.com',
-          pass: 'Dwhn0767228870',
+          pass: 'Asd0755228870',
         },
       },
       from: 'hypertargetmail@gmail.com',
@@ -43,8 +43,8 @@ const options = {
       console.log("URL: " + JSON.stringify(url, null, 4));
       console.log("Base URL: " + JSON.stringify(baseUrl, null, 4));
       return Promise.resolve(
-        // `${process.env.APP_URL || "http://localhost:3000"}/how-do-you-want-to-add-the-script`
-        `${baseUrl}/how-do-you-want-to-add-the-script`
+        `${process.env.APP_URL || "http://localhost:3000"}/how-do-you-want-to-add-the-script`
+        // `${baseUrl}/how-do-you-want-to-add-the-script`
       );
     },
     // jwt: async (token, user, account, profile, isNewUser) => { 
@@ -65,16 +65,16 @@ const options = {
       return Promise.resolve(session);
     },
   },
-  database: 'mongodb+srv://admin:admin@cluster0.w9t0r.mongodb.net/hypertarget',
-//   database: {
-//     type: 'mongodb',
-//     url: 'mongodb+srv://admin:admin@cluster0.w9t0r.mongodb.net/hypertarget',
-//     ssl: true,
-//     // replicaSet: 'Cluster0-shard-0',
-//     authSource: 'admin',
-//     retryWrites: true,
-//     synchronize: true
-// },
+  // database: 'mongodb+srv://admin:admin@cluster0.w9t0r.mongodb.net/hypertarget',
+  database: {
+    type: 'mongodb',
+    url: 'mongodb+srv://admin:admin@cluster0.w9t0r.mongodb.net/hypertarget',
+    ssl: true,
+    // replicaSet: 'Cluster0-shard-0',
+    authSource: 'admin',
+    retryWrites: true,
+    synchronize: true
+},
   // database: {
   //   type: "sqlite",
   //   database: ":memory:",
