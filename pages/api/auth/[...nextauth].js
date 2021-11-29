@@ -65,15 +65,16 @@ const options = {
       return Promise.resolve(session);
     },
   },
-  database: {
-    type: 'mongodb',
-    url: 'mongodb+srv://admin:admin@cluster0.w9t0r.mongodb.net/hypertarget',
-    ssl: true,
-    // replicaSet: 'Cluster0-shard-0',
-    authSource: 'admin',
-    retryWrites: true,
-    synchronize: true
-},
+  database: 'mongodb+srv://admin:admin@cluster0.w9t0r.mongodb.net/hypertarget',
+//   database: {
+//     type: 'mongodb',
+//     url: 'mongodb+srv://admin:admin@cluster0.w9t0r.mongodb.net/hypertarget',
+//     ssl: true,
+//     // replicaSet: 'Cluster0-shard-0',
+//     authSource: 'admin',
+//     retryWrites: true,
+//     synchronize: true
+// },
   // database: {
   //   type: "sqlite",
   //   database: ":memory:",
