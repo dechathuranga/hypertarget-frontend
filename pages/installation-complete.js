@@ -118,22 +118,7 @@ export default function Home() {
                         </div>
                     </div>
                 </div>
-
-                {/* <!-- Jquery Script v --> */}
-                {/* <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> */}
-                {/* <!-- jquery step js --> */}
-                {/* <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-steps/1.1.0/jquery.steps.js"></script> */}
-                {/* <!-- jquery validate --> */}
-                {/* <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.15.0/jquery.validate.js"></script> */}
-                {/* <!-- bootstrp --> */}
-                {/* <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script> */}
-                {/* <!-- custom js --> */}
-                {/* <script width={10} height={10} src="/assets/js/app.js"></script> */}
-                {/* <script>
-    $(document).ready(function(){
-        $("#completeAlert").modal('show');
-    });
-</script> */}
+ 
             </body>
 
         </div >

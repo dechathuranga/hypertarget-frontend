@@ -28,12 +28,4 @@ export default function Secret() {
       </main>
     );
   }
-  // return (
-  //   <main>
-  //     <div>
-  //       <h1> Protected Page</h1>
-  //       <p>{content}</p>
-  //     </div>
-  //   </main>
-  // );
 }

@@ -10,7 +10,6 @@ export default function Home() {
     const [count, setCount] = useState(0);
 
     const Home = async () => {
-        // alert(global.$key);
         fetch('/api/journey-detail', {
             method: 'POST',
             headers: {
@@ -21,6 +20,7 @@ export default function Home() {
         })
             .then(response => response.json())
             .then(response => {
+                console.log("** - ", response)
                 setCount: response.length;
                 window.$counts = response.length;
                 if (0 < response.length) {
@@ -28,6 +28,8 @@ export default function Home() {
                     document.getElementById("layer1Name").innerHTML = response[0].stepName;
                     // document.getElementById("layer1Count").innerHTML = 2;
                     // document.getElementById("layer2Name").innerHTML = response[0].stepName;
+
+                    ///////////////////////////////////////////
                     if (response[0].event == 0) {
                         fetch('/api/visitor-count-by-click', {
                             method: 'POST',
@@ -39,7 +41,6 @@ export default function Home() {
                         })
                             .then(response => response.json())
                             .then(response => {
-                                console.log("** - ", response)
                                 setCount: response.length;
                                 window.$counts = response.length;
                                 if (0 < response.length) {
@@ -60,7 +61,6 @@ export default function Home() {
                         })
                             .then(response => response.json())
                             .then(response => {
-                                console.log("** - ", response)
                                 setCount: response.length;
                                 window.$counts = response.length;
                                 if (0 < response.length) {
@@ -89,34 +89,8 @@ export default function Home() {
             document.getElementById("userJourneyName").innerHTML = "Journey Name";
             document.getElementById("layer1Name").innerHTML = "Layer Name";
             document.getElementById("layer1Count").innerHTML = "0";
-            document.getElementById("layer2Name").innerHTML = "Layer Name";
+            // document.getElementById("layer2Name").innerHTML = "Layer Name";
             Home();
-            // buttonRef.current.click();
-            // var val = "FirstTest1";
-            // const url = 'http://localhost:3000/api/visitor-count';
-            // const payload = { params: { val } }
-            // const response = await axios.get(url)
-            // if (response.data) {
-            //     console.log("** - ", response.data[0])
-
-            //     const obj = {};
-
-            //     for (let i = 0, len = response.data.length; i < len; i++) {
-            //         obj[response.data[i]['currentIp']] = response.data[i];
-            //     }
-
-            //     response.data = new Array();
-
-            //     for (const key in obj) {
-            //         response.data.push(obj[key]);
-            //     }
-
-            //     console.log("** length- ", response.data.length)
-            //      setCount : response.data.length;
-            //      global.$key = response.data.length;
-
-
-            // }
         }
         fetchMyAPI();
     }, []);
@@ -133,7 +107,9 @@ export default function Home() {
         const payload = { params: { val } }
         const response = await axios.get(url)
         if (response.data) {
+
             const obj = {};
+
             for (let i = 0, len = response.data.length; i < len; i++) {
                 obj[response.data[i]['currentIp']] = response.data[i];
             }
@@ -143,6 +119,7 @@ export default function Home() {
             for (const key in obj) {
                 response.data.push(obj[key]);
             }
+
             setCount: response.data.length;
 
         }
@@ -242,6 +219,14 @@ export default function Home() {
                             value: d.innerText,
                         })
                     );
+
+                    // setOptions([{ label: 'Click', value: '0' }]);
+                    // setOptions([{ label: 'Visit', value: '1' }]);
+
+                    // tabledata.push(
+                    //     { label: 'Click', value: "0", },
+                    //     { label: 'Visit', value: "1", }
+                    // )
 
                     setOptions(tabledata)
                     console.log(options)
@@ -380,27 +365,29 @@ export default function Home() {
                                     </div>
 
                                     <div className="card-body" style={{ padding: '45px 0px' }}>
-                                        <div className="row align-items-center">
-                                            <div className="col-lg-6 col-md-6 col-12 col-sm-12 text-center">
-                                                <Image width={150} height={70} src="/assets/images/layer1only.png" className="img-fluid" alt="" />
+                                        <div className="row">
+                                            <div className=" " style={{width: '40%', float: 'left',   padding: '5px',   }}>
+                                                
                                                 <div className="input-group">
-                                                    {/* <h3 > Count</h3> */}
-                                                    <h3 id="layer1Count" style={{ marginLeft: '45px' }} className="title-1"> (innerHTML)</h3>
-                                                    <h3 id="layer1Name" style={{ marginLeft: '45px' }} className="title-1"> (innerHTML)</h3>
+                                                <h3 id="layer1Count" style={{ marginLeft: '25px', marginRight: '25px' }}  className="title-1"> (innerHTML)</h3>
+                                                <Image width={100}  height={40} src="/assets/images/layer1only.png" className="img-fluid" alt="" />
+                        
+                                                    <h3 id="layer1Name" style={{ marginLeft: '25px' }} className="title-1"> (innerHTML)</h3>
                                                 </div>
-                                                <div className=" text-center">
-                                                    <iframe src="http://localhost:3000/" name="iframe_a" height="300px" width="100%" title="Iframe Example" style={{ padding: '20px 20px' }} ></iframe>
                                                 </div>
-                                                <Image width={150} height={70} src="/assets/images/layer2only.png" style={{ width: '100%', maxWidth: '250px' }} className="img-fluid" alt="" />
+                                                <div  className="" style={{width: '60%', float: 'left',   padding: '5px',}}>
+                                                    <iframe src="https://localhost/test/screen.html" name="iframe_a"  height="600px" width='100%' title="Iframe Example" style={{ padding: '10px 10px', transform: 'scale(0.90)', borderWidth:'5px', borderStyle:'inset'  }} ></iframe>
+                                                </div>
+                                                {/* <Image width={150} height={70} src="/assets/images/layer2only.png" style={{ width: '100%', maxWidth: '250px' }} className="img-fluid" alt="" />
                                                 <div className="input-group">
                                                     <h3 > 0</h3>
                                                     <h3 id="layer2Name" style={{ marginLeft: '45px' }} className="title-1"> (innerHTML)</h3>
                                                 </div>
-                                                <div className=" text-center">
+                                                <div className="col-lg-6 col-md-6 col-12 col-sm-12">
                                                     <iframe src="http://localhost:3000/pricing" name="iframe_a" height="300px" width="100%" title="Iframe Example" style={{ padding: '20px 20px' }} ></iframe>
-                                                </div>
-                                            </div>
-                                            <div className="col-lg-6 col-md-6 col-12 col-sm-12">
+                                                </div> */}
+                                            {/* </div> */}
+                                            {/* <div className="col-lg-6 col-md-6 col-12 col-sm-12">
                                                 <form action="" className="user-journey-form-1">
                                                     <div className="input-group">
                                                         <div className="input-wrapper">
@@ -423,7 +410,7 @@ export default function Home() {
                                                         </div>
                                                     </div>
                                                 </form>
-                                            </div>
+                                            </div> */}
                                         </div>
                                     </div>
                                 </div>
@@ -555,6 +542,7 @@ export default function Home() {
                                                             <div className="select-wrap">
                                                                 <select
                                                                     onChange={(e) => selectEvent()}
+                                                                    // onClick={(e) => handleSaveJourney()}
                                                                     name="" id="" value={global.$event}
                                                                 >
 
@@ -573,6 +561,7 @@ export default function Home() {
                                                             <div className="select-wrap">
                                                                 <select
                                                                     onChange={(e) => selectEventInnerText()}
+                                                                    // onClick={(e) => handleSaveJourney()}
                                                                     name="" id="" value={global.$valueInnerText}
                                                                 >
                                                                     {options.map((option) => (

@@ -8,25 +8,15 @@ import { Elements } from "@stripe/react-stripe-js";
 import Head from 'next/head'
 import { useRouter } from "next/router";
 import { withIronSession } from "next-iron-session";
-import getConfig from 'next/config'
-// import { signIn, signOut, useSession } from "next-auth/client";
+import getConfig from 'next/config';
 import { providers, signIn, getSession, csrfToken } from "next-auth/client";
 const bcrypt = require('bcryptjs');
 import Image from 'next/image';
-
-// import CheckoutForm from "./CheckoutForm";
-
-console.log("*****----**-*-*--")
-console.log(global.$type);
-console.log(global.$price);
 
 let data1 = {
   csrfToken : '298e12975ee552e8d504cdb6aff2cdd45a4a4c6340b74de4d8cb0df887fdf7ec%7Cfef88c4a4b74fd57686bcb474f48f49de424aad8ccaa2cf709c970051f9b13db',
   email : 'dechathuranga@gmail.com',
 }
-
-console.log("// * - " + getSession)
-
 
 const stripePromise = loadStripe("pk_test_51JX4itAOb7pHxrW2EOFHb2DOYEDNSALi7fi8ipuGwpJ0SdKbbT4Ur0tY5otpkw1U6o0aELi9ftkEjAM56siFJugK00PDcVYkky");
 
@@ -73,7 +63,6 @@ const onKeyUpEmail = (e) => {
   window.$email = e.target.value;
 }
 
-
 const CheckoutForm = ({ paymentIntent }) => {
   const stripe = useStripe();
   const elements = useElements();
@@ -84,7 +73,6 @@ const CheckoutForm = ({ paymentIntent }) => {
   const handleSubmit = async e => {
     // e.preventDefault();
 
-    console.log("payme**********")
     try {
       const {
         error,
@@ -120,9 +108,7 @@ const CheckoutForm = ({ paymentIntent }) => {
       }
 
         window.$email = window.$email;
-      
-      alert(window.$name + " - " + window.$email)
-
+    
       fetch('/api/add-user', {
       method: 'POST',
       headers: {
@@ -380,12 +366,6 @@ const CheckoutForm = ({ paymentIntent }) => {
         </div>
       </footer>
 
-      {/* <!-- Jquery Script v --> */}
-      {/* <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> */}
-      {/* <!-- bootstrp --> */}
-      {/* <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script> */}
-      {/* <script src="/assets/js/owl.carousel.min.js"></script> */}
-
     </body>
 
   </div>
@@ -393,4 +373,3 @@ const CheckoutForm = ({ paymentIntent }) => {
 
   }
 
-// export default CheckoutPage;

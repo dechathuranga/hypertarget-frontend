@@ -94,10 +94,6 @@ export default function Home() {
       </Head>
       <body>
 
-{/* <p id="demo" onClick={(e) => myFunction()}>Click me to change my HTML content (innerHTML).</p> */}
-
-
-
         <nav className="main-nav landing-nav">
           <div className="nav-wrapper">
             <div className="d-flex">
@@ -333,22 +329,6 @@ export default function Home() {
             </div>
           </div>
         </footer>
-
-        {/* <!-- Jquery Script v --> */}
-        {/* <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> */}
-        {/* <!-- bootstrp --> */}
-        {/* <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script> */}
-        {/* <script src="/assets/js/owl.carousel.min.js"></script> */}
-        {/* <!-- custom js --> */}
-        {/* <!-- <script src="/assets/js/app.js"></script> --> */}
-        {/* <script>
-          $('.menu-bar').on('click', function () {
-            $('.mobile-nav').addclassName('active')
-          });
-    $('.close').on('click', function () {
-            $('.mobile-nav').removeclassName('active')
-          })
-</script> */}
       </body>
     </div>
   )

@@ -10,8 +10,6 @@ import {
   Stack,
 } from "@chakra-ui/react";
 
-console.log("mail - "+ global.$email);
-
 export default function SignIn({ providers, csrfToken }) {
 
   const buttonRef = useRef(null);
@@ -45,8 +43,6 @@ export default function SignIn({ providers, csrfToken }) {
 SignIn.getInitialProps = async (context) => {
   const { req, res } = context;
   const session = await getSession({ req });
-
-  console.log("test - ");
 
   if (session && res && session.accessToken) {
     res.writeHead(302, {

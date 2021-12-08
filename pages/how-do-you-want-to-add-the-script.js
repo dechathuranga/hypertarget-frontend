@@ -11,7 +11,6 @@ export default function Home() {
 
   const handleSubmit = async (e, val) => {
     e.preventDefault()
-    console.log(val)
 
     const url = 'http://localhost:3000/api/user-detail';
     const payload = { params: { val }}
